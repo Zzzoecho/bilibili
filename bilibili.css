@@ -325,7 +325,7 @@ menu > a {
     overflow: hidden;
     transition: all .6s;
 }
-.hit .views-top .panel .watch-later {
+.watch-later {
     display: none;
     width: 22px;
     height: 22px;
@@ -370,4 +370,79 @@ menu > a {
 }
 .hit .views-top:hover .btn {
     opacity: 1;
+}
+
+/****推广****/
+.ad {
+    margin: 20px 0;
+}
+.ad .title {
+    position: relative;
+    margin-bottom: 15px;
+}
+.ad .title icon {
+    /*position: absolute;
+    top: 10px;*/
+    vertical-align: sub;
+    margin-right: 10px;
+    width: 40px;
+    height: 40px;
+    background-position: -141px -75px;
+}
+.ad .title span {
+    position: absolute;
+    top: 10px;
+    left: 50px;
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 400;
+    
+}
+.ad .title a {
+    position: absolute;
+    top: 18px;
+    left: 115px;
+    margin-left: 10px;
+    font-size: 12px;
+    color: #6d757a;
+}
+.ad .title a:hover {
+    color: #00a1d6;
+}
+.ad .video-ct {
+    width: 720px;
+}
+.video {
+    position: relative;
+    width: 160px;
+    height: 100px;
+    display: inline-block;
+}
+.video img {
+    border-radius: 4px;
+}
+.video span {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+}
+.video .watch-later {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    display: block;
+
+}
+.ad .video-ct li .watch-later {
+    display: block;
+}
+
+.video a {
+    font-size: 12px;
+    color: #222;
+    height: 40px;
+    text-align: left;
+    overflow: hidden;
+    word-wrap: break-word;
+    word-break: break-all;
 }
