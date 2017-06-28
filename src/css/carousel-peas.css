@@ -1,0 +1,81 @@
+.carousel ul, .carousel li {
+    list-style: none;
+}
+.carousel .imgList li {
+    float: left;
+    
+}
+.carousel .clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.carousel .imgList img {
+    width: 440px;
+    height: 220px;
+}
+
+.carousel {
+    position: relative;
+    top: 0;
+    width: 440px;
+    height: 220px;
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+.carousel .imgList {
+    position: absolute;
+    width: 4000px;
+    height: 220px;
+}
+
+.carousel .btn-next {
+    left: 940px;
+}
+.carousel .bullet{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background: -webkit-linear-gradient(transparent,rgba(0,0,0,.5));
+}
+
+.carousel .bullet .textList li {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 14px;
+    color: #fff;
+    opacity: 0;
+    z-index: -1;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+.carousel .bullet .bulletList {
+    position: absolute;
+    bottom: 10px;
+    right: 25px;
+}
+
+.carousel .bullet .bulletList li {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-image: url(http://s1.hdslb.com/bfs/static/phoenix/home/static/img/icons.afbff55.png);
+    background-position: -855px -790px;
+    background-color: transparent;
+    margin-left: 8px;
+    cursor: pointer;
+}
+.carousel .bullet .bulletList li:hover {
+    background-position: -919px -790px;
+}
+.carousel .bullet .bulletList .active {
+    background-position: -855px -727px;
+}
+.carousel .bullet .textList .active {
+    opacity: 1;
+    z-index: 1;
+}

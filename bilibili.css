@@ -1,0 +1,373 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Helvetica Neue', Helvetica, Arial, 'Microsoft Yahei';
+}
+
+icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-image: url(http://s1.hdslb.com/bfs/static/phoenix/home/static/img/icons.afbff55.png);
+}
+
+header{
+    color: #222222;
+    position: relative;
+    z-index: 10000;  
+}
+header nav {
+    height: 42px;
+    background: #fff;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 1px 2px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    position: relative;
+    z-index: 10000;
+    color: #222222;
+    background-color: transparent;
+}
+
+header nav .mask-wrap {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+header nav .mask-wrap .blur-mask {
+    padding: 0 20px;
+    position: absolute;
+    top: -10px;
+    left: -20px;
+    width: 100%;
+    height: 62px;
+    filter: blur(5px);
+    background-image: url(http://i0.hdslb.com/bfs/archive/17759bd2d61eb97e992642f79a15ddabd015d0dc.png@.webp);
+    background-position: center 0px;
+    z-index: 50;
+}
+header nav .mask-wrap .color-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 100;
+}
+
+/****z-header****/
+
+nav > .z-header {
+    height: 42px;
+    text-align: center;
+    font-size: 10px;
+    line-height: 42px;
+}
+nav>.z-header>.menu,
+nav>.z-header>.user {
+    position: absolute;
+    top: 0;
+    display: inline-block;
+    height: 48px;
+    
+    z-index: 1000;
+}
+nav >.z-header>.menu {
+    width: 426px;
+    left: 182px;
+}
+nav >.z-header>.user {
+    right: 0;
+    width: 400px;
+}
+nav > .z-header > .menu .home {
+    display: inline-block;
+    padding-left: 32px;
+    background-repeat: no-repeat;
+    background-image: url(http://s1.hdslb.com/bfs/static/phoenix/home/static/img/icons.afbff55.png);
+    background-position: -847px -74px;
+}
+header li {
+    float: left;
+    padding: 0 11px;
+    cursor: pointer;
+}
+header a {
+    color: #fff;
+}
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+nav>.z-header>.user li:first-child::after {
+    position: relative;
+    left: 10px;
+    content: '';
+    height: 12px;
+    border-right: 1px solid #fff;
+}
+nav>.z-header>.user .sub {
+    margin-left: 10px;
+}
+nav>.z-header>.user li:last-child {
+    padding: 0px;
+}
+nav>.z-header>.user li:last-child a {
+    display: block;
+    z-index: 10;
+    width: 58px;
+    height: 48px;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADoAAAAwBAMAAACyDnR9AAAAMFBMVEXUUnzWUn3WUn3VUnzVUnzVUn3UUnzUUnzaU4DfVYTuW4zxXI3VUn3qWYjmWIfkV4UXsS1iAAAACHRSTlMB99aQK5W8mPW6JqwAAACVSURBVDjLxcuhDUJBEEXRa2gAhcVRABKHRVAIghZAISgAFH4mNDArIQRBBSSUAC3wfwG7z2x+9uxmzM0jKe2qR0qe/06K5B6RvYG5hXn/LHMxYch6VXibeHyUqvpV0NufUlX/SlU9K1wUvW1WDwonRW+b1afCREx3zI5lexavshsrUe+MRF3DphgfIMZbgOU028Zz6AD+Td5T0E5DWAAAAABJRU5ErkJggg==) center center no-repeat;
+    border-radius: 0 0 5px 5px;
+}
+
+nav > .z-header li:hover {
+    background-color: rgba(255,255,255,0.2);
+    transform: all 0.5s;
+}
+nav > .z-header .game:hover .div_game {
+    display: block;
+}
+nav > .z-header .life:hover .life-box {
+    display: block;
+}
+nav > .z-header .phone:hover .phone-box {
+    display: block;
+}
+nav > .z-header .war:hover .war-box {
+    display: block;
+}
+nav > .z-header .user .sub:hover .upload {
+    display: block;
+}
+/***serch-wrap*****/
+.search-wrap {
+    position: relative;
+    height: 170px;
+    background: transparent no-repeat center -10px;
+    position: relative;
+    margin: -42px auto 0;
+    background-image: url(http://i0.hdslb.com/bfs/archive/17759bd2d61eb97e992642f79a15ddabd015d0dc.png@.webp);
+}
+.search-wrap img {
+    position: absolute;
+    top: 56px;
+    left: 216px;
+}
+.search-wrap .search {
+    position: absolute;
+    top: 58px;
+    right: 99px;
+    height: 32px;
+    border: none;
+    border-radius: 4px;
+    background-color: rgba(255,255,255,0.88);
+    outline: none;
+}
+.search-wrap a {
+    position: absolute;
+    top: 116px;
+    right: 466px;
+    border-radius: 4px;
+    font-size: 10px;
+    color: #F35D8E;
+    background-color: rgba(255,255,255,0.88);
+}
+.search-wrap a span {
+    display: inline-block;
+    padding: 8px 6px;
+    padding-left: 26px;
+    background-repeat: no-repeat;
+    background-position: -659px -655px;
+    background-image: url(http://s1.hdslb.com/bfs/static/phoenix/home/static/img/icons.afbff55.png);
+}
+
+.search-wrap .search input {
+    width: 250px;
+    padding: 0 8px;
+    box-shadow: 1px -1px 1px 1px rgba(0,0,0,0.15); 
+}
+.search-wrap .search .submit {
+    position: absolute;
+    top: 58px;
+    right: 98px;
+
+    display: inline-block;
+    width: 48px;
+    height: 32px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: -653px -720px;
+    background-image: url(http://s1.hdslb.com/bfs/static/phoenix/home/static/img/icons.afbff55.png);
+} 
+/*****content*****/
+.content {
+    width: 980px;
+    margin: 0 auto;
+}
+/****menu****/
+menu > ul {
+    display: inline-block;
+    max-width: 904px;
+    margin: 0;
+}
+menu > ul > li {
+    float: left;
+    position: relative;
+    margin: 10px;
+    padding-top: 20px;
+    
+}
+menu > ul >li .num {
+    position: absolute;
+    top: 3px;
+    width: 28px;
+    color: #fff;
+    background: #ffafc9;
+    border-radius: 4px;
+    line-height: 14px;
+    text-align: center;
+}
+menu > ul > li span {
+    display: inline-block;
+    padding: 1px 3px;
+    font-size: 12px;
+    font-family: Calibri,Arial,Helvetica,sans-serifsans-serif;
+}
+menu > ul > .home {
+    margin-left: 0;
+    background: url(http://s1.hdslb.com/bfs/static/phoenix/home/static/img/icons.afbff55.png) -658px -1173px no-repeat;
+}
+menu > ul > li a {
+    color: #000;
+    font-size: 14px;
+}
+#icon {
+    background-image: url(http://s1.hdslb.com/bfs/static/phoenix/home/static/img/icons.afbff55.png);
+    background-repeat: no-repeat;
+}
+menu > ul > .iconfont {
+    margin: 10px;
+    padding: 0 0 0 23px;
+    line-height: 50px;
+    height: 40px;
+}
+menu > ul > .icon-square {
+    background-position: -664px -904px;
+}
+menu > ul > .icon-life {
+    background-position: -664px -518px;
+}
+menu > ul > .icon-blackroom {
+    background-position: -725px -519px;
+}
+menu > ul > .iconfont a {
+    font-size: 16px;
+}
+menu > a {
+    float: right;
+    margin: 10px 0;
+}
+
+/****hit*****/
+.hit {
+    position: relative;
+}
+.hit .views-top {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 540px;
+    height: 220px;
+}
+.hit .views-top .panel {
+    float: left;
+    position: relative;
+    margin: 0 0 20px 20px;
+    width: 160px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 4px;
+}
+.hit .views-top .panel .card-mark {
+    position: absolute;
+    top: 68px;
+    left: 0;
+    width: 150px;
+    height: 20px;
+    padding: 10px 5px;
+    overflow: hidden;
+    background: linear-gradient(transparent,rgba(0,0,0,.1) 20%,rgba(0,0,0,.2) 35%,rgba(0,0,0,.6) 65%,rgba(0,0,0,.9));
+    color: #fff;
+    font-size: 12px;
+    line-height: 20px;
+}
+.hit .views-top .panel .card-mark .title {
+    overflow: hidden;
+    height: 40px;
+    margin-bottom: 5px;
+}
+.hit .views-top .panel .card-mark p:not(.title) {
+    color: #99a2aa;
+    height: 20px;
+    line-height: 20px;
+    overflow: hidden;
+    transition: all .6s;
+}
+.hit .views-top .panel .watch-later {
+    display: none;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    right: 6px;
+    bottom: 4px;
+    cursor: pointer;
+    background-image: url(http://s1.hdslb.com/bfs/static/phoenix/home/static/img/watchlater-1.9f7609f.png);
+}
+.hit .views-top .btn {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    margin-top: -28px;
+    background-color: rgba(0,0,0,.6);
+    background-image: url(http://s1.hdslb.com/bfs/static/phoenix/home/static/img/icons2.324edea.png);
+    background-repeat: no-repeat;
+    width: 20px;
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    transition: all .3s;
+    cursor: pointer;
+}
+.hit .views-top .yesterday {
+    left: 20px;
+    padding: 13px 5px 13px 10px;
+    background-position: 6px -1211px;
+}
+.hit .views-top .week {
+    right: 0;
+    padding: 13px 10px 13px 5px;
+    background-position: 25px -1262px;
+}
+.hit .views-top .panel:hover .card-mark {
+    top: 0;
+    height: 100px;
+    background: rgba(0,0,0,0.7);
+}
+.hit .views-top .panel:hover .watch-later {
+    display: block;
+}
+.hit .views-top:hover .btn {
+    opacity: 1;
+}
