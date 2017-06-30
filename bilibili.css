@@ -10,6 +10,7 @@ icon {
     display: inline-block;
     width: 20px;
     height: 20px;
+    vertical-align: sub;
     background-repeat: no-repeat;
     background-image: url(http://s1.hdslb.com/bfs/static/phoenix/home/static/img/icons.afbff55.png);
 }
@@ -184,6 +185,9 @@ nav > .z-header .user .sub:hover .upload {
     color: #F35D8E;
     background-color: rgba(255,255,255,0.88);
 }
+.search-wrap a:hover, .search-wrap .search input:hover{
+    background-color: #fff;
+}
 .search-wrap a span {
     display: inline-block;
     padding: 8px 6px;
@@ -227,7 +231,6 @@ menu > ul > li {
     position: relative;
     margin: 10px;
     padding-top: 20px;
-    
 }
 menu > ul >li .num {
     position: absolute;
@@ -258,6 +261,7 @@ menu > ul > li a {
     background-repeat: no-repeat;
 }
 menu > ul > .iconfont {
+    position: relative;
     margin: 10px;
     padding: 0 0 0 23px;
     line-height: 50px;
@@ -280,6 +284,132 @@ menu > a {
     margin: 10px 0;
 }
 
+menu > ul >li > .nav-detail {
+    position: absolute;
+    top: 48px;
+    left: 0;
+    width: 130px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.16);
+    border-radius: 0 0 4px 4px;
+    overflow: hidden;
+    background: #fff;
+    opacity: 0;
+}
+menu > ul >li > .nav-detail .detail-items {
+    width: 100%;
+    height: 30px;
+    text-align: left;
+    transition: all .2s;
+    white-space: nowrap;
+    cursor: pointer;
+}
+menu > ul >li > .nav-detail .detail-items span {
+    display: inline-block;
+    position: relative;
+    color: #222;
+    line-height: 30px;
+    font-family: 'Microsoft Yahei';
+    padding-left: 25px;
+    background: url(http://s1.hdslb.com/bfs/static/phoenix/home/static/img/icons2.324edea.png) no-repeat 12px -1612px;
+}
+@keyframes slidein {
+    from {
+        right: -80px;
+    }
+    to {
+        right: -18px;
+    }
+}
+menu > ul >li > .nav-detail .detail-items .arrow {
+    display: inline-block;
+    opacity: 0;
+    position: absolute;
+    top: 6px;
+    right: -18px;
+    background: url(http://s1.hdslb.com/bfs/static/phoenix/home/static/img/icons2.324edea.png) no-repeat 0 -1581px;
+    width: 15px;
+    height: 18px;
+}
+menu > ul >li > .nav-detail .detail-items:hover {
+    background-color: #e5e9ef;
+}
+menu > ul >li:hover .nav-detail {
+    z-index: 100;
+    opacity: 1;
+}
+menu > ul >li .nav-detail .detail-items:hover .arrow {
+    opacity: 1;
+    animation-duration: .3s;
+    animation-name: slidein;
+}
+menu > ul > #icon .icon-detail {
+    opacity: 0;
+    position: absolute;
+    top: 48px;
+    left: 0;
+    width: 387px;
+    height: 188px;
+    padding: 20px 0;
+    background: #fff;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,.16);
+    border-radius: 0 0 4px 4px;
+}
+menu > ul > #icon .icon-detail ul {
+    width: 107px;
+    margin-top: -15px;
+}
+menu > ul > #icon .icon-detail ul li {
+    margin-top: 8px;
+    padding-left: 17px;
+    line-height: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+menu > ul > #icon .icon-detail ul li span {
+    font-family: 'Microsoft Yahei';
+    font-size: 12px;
+    color: #222;
+}
+menu > ul > #icon .icon-detail ul li:hover {
+    background-color: #e5e9ef;
+}
+menu > ul > #icon .icon-detail ul li:hover icon{
+    margin-left: 4px;
+    transition: all .3s;
+}
+menu > ul > #icon .icon-detail ul .activity {
+    background-position: -280px -1173px;
+}
+menu > ul > #icon .icon-detail ul .game {
+    background-position: -279px -1234px;
+}
+menu > ul > #icon .icon-detail ul .news {
+    background-position: -344px -1171px;
+}
+menu > ul > #icon .icon-detail ul .pic {
+    background-position: -280px -1363px;
+}
+menu > ul > #icon .icon-detail ul .mango {
+    background-position: -280px -1428px;
+}
+menu > ul > #icon .icon-detail .imgs {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    width: 240px;
+    height: 188px;
+    padding: 0 20px;
+    border-left: 1px solid #e5e9ef;
+    cursor: pointer;
+}
+menu > ul > #icon .icon-detail .imgs img {
+    border-radius: 4px;
+}
+menu > ul > #icon:hover .icon-detail {
+    z-index: 100;
+    opacity: 1;
+} 
 /****hit*****/
 .hit {
     position: relative;
@@ -417,32 +547,59 @@ menu > a {
     width: 160px;
     height: 100px;
     display: inline-block;
+    margin-right: 16px;
+    cursor: pointer;
+}
+.video .mask {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    transition: all .3s;
 }
 .video img {
     border-radius: 4px;
+    width: 100%;
+    height: 100%;
 }
 .video span {
     position: absolute;
     bottom: 5px;
     left: 5px;
+    color: #fff;
+    font-size: 12px;
+    opacity: 0;
 }
 .video .watch-later {
     position: absolute;
     bottom: 5px;
     right: 5px;
     display: block;
-
+    opacity: 0;
 }
 .ad .video-ct li .watch-later {
     display: block;
 }
 
 .video a {
+    display: block;
     font-size: 12px;
     color: #222;
     height: 40px;
+    line-height: 20px;
     text-align: left;
     overflow: hidden;
     word-wrap: break-word;
     word-break: break-all;
+    transition: all .2s linear;
+}
+.video:hover .mask{
+    background: rgba(0,0,0,.2);
+}
+.video:hover span,.video:hover .watch-later {
+    opacity: 1;
+}
+.video:hover a {
+    color: #00a1d6;
 }
