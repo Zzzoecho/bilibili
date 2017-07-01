@@ -262,10 +262,10 @@ menu > ul > li a {
 }
 menu > ul > .iconfont {
     position: relative;
-    margin: 10px;
+    margin-bottom: 0;
     padding: 0 0 0 23px;
     line-height: 50px;
-    height: 40px;
+    height: 50px;
 }
 menu > ul > .icon-square {
     background-position: -664px -904px;
@@ -284,7 +284,7 @@ menu > a {
     margin: 10px 0;
 }
 
-menu > ul >li > .nav-detail {
+menu > ul >li .nav-detail {
     position: absolute;
     top: 48px;
     left: 0;
@@ -295,7 +295,12 @@ menu > ul >li > .nav-detail {
     background: #fff;
     opacity: 0;
 }
-menu > ul >li > .nav-detail .detail-items {
+
+menu > ul > li > .icon-detail > .nav-detail {
+    top: 0;
+    width: 100px;
+}
+menu > ul >li .nav-detail .detail-items {
     width: 100%;
     height: 30px;
     text-align: left;
@@ -303,7 +308,7 @@ menu > ul >li > .nav-detail .detail-items {
     white-space: nowrap;
     cursor: pointer;
 }
-menu > ul >li > .nav-detail .detail-items span {
+menu > ul >li .nav-detail .detail-items span {
     display: inline-block;
     position: relative;
     color: #222;
@@ -320,7 +325,7 @@ menu > ul >li > .nav-detail .detail-items span {
         right: -18px;
     }
 }
-menu > ul >li > .nav-detail .detail-items .arrow {
+menu > ul >li .nav-detail .detail-items .arrow {
     display: inline-block;
     opacity: 0;
     position: absolute;
@@ -329,8 +334,9 @@ menu > ul >li > .nav-detail .detail-items .arrow {
     background: url(http://s1.hdslb.com/bfs/static/phoenix/home/static/img/icons2.324edea.png) no-repeat 0 -1581px;
     width: 15px;
     height: 18px;
+    transition: all .2s;
 }
-menu > ul >li > .nav-detail .detail-items:hover {
+menu > ul >li .nav-detail .detail-items:hover {
     background-color: #e5e9ef;
 }
 menu > ul >li:hover .nav-detail {
@@ -344,22 +350,60 @@ menu > ul >li .nav-detail .detail-items:hover .arrow {
 }
 menu > ul > #icon .icon-detail {
     opacity: 0;
-    position: absolute;
-    top: 48px;
+    z-index: -100;
+    position: absolute;  
     left: 0;
-    width: 387px;
-    height: 188px;
-    padding: 20px 0;
     background: #fff;
     overflow: hidden;
     box-shadow: 0 2px 4px rgba(0,0,0,.16);
     border-radius: 0 0 4px 4px;
 }
-menu > ul > #icon .icon-detail ul {
+menu > ul > #icon > .square-detail {
+    top: 48px;
+    width: 387px;
+    height: 188px;
+    padding: 20px 0;
+}   
+menu > ul > .icon-life > .life-detail {
+    top: 35px;
+    width: 350px;
+    height: 270px;
+    padding-bottom: 10px;
+}
+menu > ul > .icon-life > .life-detail ul {
+    width: 100px;
+    box-shadow: none;
+}
+menu > ul > .icon-life > .life-detail ul li {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    height: 30px;
+    line-height: 30px;
+    cursor: pointer;
+}
+menu > ul > .icon-life > .life-detail > .imgs {
+    position: absolute;
+    top: 0;
+    right: 19px;
+    width: 210px;
+    height: 250px;
+    margin: 10px 0;
+    padding-left: 20px;
+    border-left: 1px solid #e5e9ef;
+    cursor: pointer;
+}
+menu > ul > .icon-life > .life-detail > .nav-detail > li:hover {
+    padding-left: 4px;
+}
+menu > ul > .icon-life > .life-detail > .nav-detail > li:hover .arrow {
+    right: 6px;
+}
+menu > ul > #icon .square-detail ul {
     width: 107px;
     margin-top: -15px;
 }
-menu > ul > #icon .icon-detail ul li {
+menu > ul > #icon .square-detail ul li {
     margin-top: 8px;
     padding-left: 17px;
     line-height: 24px;
@@ -374,7 +418,7 @@ menu > ul > #icon .icon-detail ul li span {
 menu > ul > #icon .icon-detail ul li:hover {
     background-color: #e5e9ef;
 }
-menu > ul > #icon .icon-detail ul li:hover icon{
+menu > ul > #icon .square-detail ul li:hover icon{
     margin-left: 4px;
     transition: all .3s;
 }
@@ -393,7 +437,7 @@ menu > ul > #icon .icon-detail ul .pic {
 menu > ul > #icon .icon-detail ul .mango {
     background-position: -280px -1428px;
 }
-menu > ul > #icon .icon-detail .imgs {
+menu > ul > #icon .square-detail .imgs {
     position: absolute;
     top: 20px;
     right: 0;
@@ -410,6 +454,7 @@ menu > ul > #icon:hover .icon-detail {
     z-index: 100;
     opacity: 1;
 } 
+
 /****hit*****/
 .hit {
     position: relative;
@@ -505,14 +550,13 @@ menu > ul > #icon:hover .icon-detail {
 /****推广****/
 .ad {
     margin: 20px 0;
+    position: relative;
 }
 .ad .title {
     position: relative;
     margin-bottom: 15px;
 }
 .ad .title icon {
-    /*position: absolute;
-    top: 10px;*/
     vertical-align: sub;
     margin-right: 10px;
     width: 40px;
@@ -526,7 +570,6 @@ menu > ul > #icon:hover .icon-detail {
     font-size: 24px;
     line-height: 24px;
     font-weight: 400;
-    
 }
 .ad .title a {
     position: absolute;
@@ -541,6 +584,7 @@ menu > ul > #icon:hover .icon-detail {
 }
 .ad .video-ct {
     width: 720px;
+    float: left;
 }
 .video {
     position: relative;
@@ -602,4 +646,33 @@ menu > ul > #icon:hover .icon-detail {
 }
 .video:hover a {
     color: #00a1d6;
+}
+.ad .con {
+    width: 260px;
+    position: absolute;
+    top: 10px;
+    right: 0;
+}
+.ad .con img {
+    border-radius: 4px;
+}
+.ad .con .online {
+    height: 34px;
+    border-radius: 4px;
+    text-align: center;
+    background: #e5e9ef;
+    white-space: nowrap;
+    margin-bottom: 10px;
+}
+.ad .con .online a {
+    color: #6d757a;
+    font-size: 12px;
+    line-height: 34px;
+}
+.ad .con .online span {
+    display: inline-block;
+    height: 10px;
+    border-left: 1px solid #b8c0cc;
+    line-height: 10px;
+    margin: 12px 15px 0;
 }
