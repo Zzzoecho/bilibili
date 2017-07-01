@@ -2,8 +2,7 @@
     list-style: none;
 }
 .carousel .imgList li {
-    float: left;
-    
+    float: left;  
 }
 .carousel .clearfix::after {
     content: '';
@@ -11,9 +10,13 @@
     clear: both;
 }
 
-.carousel .imgList img {
+.eatpeas .imgList img {
     width: 440px;
     height: 220px;
+}
+.carousel-module .c-panel .imgList img{
+    width: 260px;
+    height: 248px;
 }
 
 .carousel {
@@ -23,6 +26,9 @@
     height: 220px;
     overflow: hidden;
     border-radius: 3px;
+}
+.carousel-module .c-panel {
+    
 }
 
 .carousel .imgList {

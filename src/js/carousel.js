@@ -1,5 +1,5 @@
-Rotation = (function () {
-    function Carousel($ct) {
+Carousel = (function () {
+    function _Carousel($ct) {
         this.$ct = $ct
         this.init()
         this.bind()
@@ -7,13 +7,13 @@ Rotation = (function () {
         this.autoplay()
     }
 
-    Carousel.prototype = {
+    _Carousel.prototype = {
         init: function () {
             var _this = this
-            var $imgList = this.$imgList = this.$ct.find('.imgList'),
-                $img = this.$img = this.$ct.find('.imgList>li'),
-                $bullet = this.$bullet = this.$ct.find('.bulletList>li'),
-                $textList = this.$textList = this.$ct.find('.textList>li')
+            var $imgList = this.$imgList = this.$ct.find('.pic'),
+                $img = this.$img = this.$ct.find('.pic>li'),
+                $bullet = this.$bullet = this.$ct.find('.trig>span'),
+                $title = this.$title = this.$ct.find('.title>li')
 
             var $firstImg = $img.first(),
                 $lastImg = $img.last()
@@ -27,7 +27,7 @@ Rotation = (function () {
             $imgList.prepend($lastImg.clone())
 
             $imgList.css({
-                'left': -this.ImgWidth
+                'left': '-260px'
             })
         },
 
@@ -44,8 +44,8 @@ Rotation = (function () {
             this.$bullet.siblings().removeClass('active')
             this.$bullet.eq(idx).addClass('active')
 
-            this.$textList.siblings().removeClass('active')
-            this.$textList.eq(idx).addClass('active')
+            this.$title.siblings().removeClass('on')
+            this.$title.eq(idx).addClass('on')
         },
 
         play: function (idx) {
@@ -53,9 +53,8 @@ Rotation = (function () {
             if (this.isAnimate) return
             this.isAnimate = true
             _this.curIndex = idx
-            console.log(this.ImgWidth)
             $('.imgList').animate({
-                left: -this.ImgWidth * (idx + 1)
+                left: '-260' * (idx + 1)
             }, 300, function () {
                 _this.setBullet(idx)
             })
@@ -76,7 +75,7 @@ Rotation = (function () {
     return {
         init: function ($ct) {
             $ct.each(function (index, node) {
-                new Carousel($(node))
+                new _Carousel($(node))
             })
         }
     }

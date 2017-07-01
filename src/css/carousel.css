@@ -1,0 +1,17 @@
+.carousel-module {
+    width: 260px;
+    height: 248px;
+    overflow: hidden;
+}
+.carousel-module .c-panel {
+    width: 780px;
+}
+.carousel-module .c-panel .pic {
+
+}
+.carousel-module .c-panel .pic li {
+    float: left;
+}
+.carousel-module .c-panel .pic li img {
+    border-radius: 4px;
+}
