@@ -27,7 +27,7 @@ Rotation = (function () {
             $imgList.prepend($lastImg.clone())
 
             $imgList.css({
-                'left': -this.ImgWidth
+                'left': -440
             })
         },
 
@@ -53,9 +53,8 @@ Rotation = (function () {
             if (this.isAnimate) return
             this.isAnimate = true
             _this.curIndex = idx
-            console.log(this.ImgWidth)
             $('.imgList').animate({
-                left: -this.ImgWidth * (idx + 1)
+                left: -440 * (idx + 1)
             }, 300, function () {
                 _this.setBullet(idx)
             })

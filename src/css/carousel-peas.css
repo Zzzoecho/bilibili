@@ -14,10 +14,6 @@
     width: 440px;
     height: 220px;
 }
-.carousel-module .c-panel .imgList img{
-    width: 260px;
-    height: 248px;
-}
 
 .carousel {
     position: relative;
@@ -26,9 +22,6 @@
     height: 220px;
     overflow: hidden;
     border-radius: 3px;
-}
-.carousel-module .c-panel {
-    
 }
 
 .carousel .imgList {

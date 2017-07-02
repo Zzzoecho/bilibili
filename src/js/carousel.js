@@ -10,60 +10,58 @@ Carousel = (function () {
     _Carousel.prototype = {
         init: function () {
             var _this = this
-            var $imgList = this.$imgList = this.$ct.find('.pic'),
-                $img = this.$img = this.$ct.find('.pic>li'),
-                $bullet = this.$bullet = this.$ct.find('.trig>span'),
-                $title = this.$title = this.$ct.find('.title>li')
+            var $picList = this.$picList = this.$ct.find('.pic'),
+                $pic = this.$pic = this.$ct.find('.pic>li'),
+                $trig = this.$trig = this.$ct.find('.trig>span'),
+                $title = this.$title = this.$ct.find('.info>li')
 
-            var $firstImg = $img.first(),
-                $lastImg = $img.last()
+            var $firstPic = $pic.first(),
+                $lastPic = $pic.last()
 
-            this.curIndex = 0
-            this.isAnimate = false
-            this.imgLength = $img.length
-            this.ImgWidth = $img.width()
+            this.curIdx = 0
+            this.animateLock = false
+            this.picLength = $pic.length
 
-            $imgList.append($firstImg.clone())
-            $imgList.prepend($lastImg.clone())
+            $picList.append($firstPic.clone())
+            $picList.prepend($lastPic.clone())
 
-            $imgList.css({
+            $picList.css({
                 'left': '-260px'
             })
         },
 
         bind: function () {
             var _this = this
-
-            this.$bullet.on('click', function () {
+            this.$trig.on('mouseenter', function () {
                 var index = $(this).index()
                 _this.play(index)
             })
         },
 
-        setBullet: function (idx) {
-            this.$bullet.siblings().removeClass('active')
-            this.$bullet.eq(idx).addClass('active')
+        setTrig: function (idx) {
+            this.$trig.siblings().removeClass('on')
+            this.$trig.eq(idx).addClass('on')
 
-            this.$title.siblings().removeClass('on')
-            this.$title.eq(idx).addClass('on')
+            this.$title.siblings().removeClass('active')
+            this.$title.eq(idx).addClass('active')
         },
 
         play: function (idx) {
             var _this = this
-            if (this.isAnimate) return
-            this.isAnimate = true
-            _this.curIndex = idx
-            $('.imgList').animate({
-                left: '-260' * (idx + 1)
+            if (this.animateLockimate) return
+            this.animateLockimate = true
+            _this.curIdx = idx
+            $('.pic').animate({
+                left: -260 * (idx + 1)
             }, 300, function () {
-                _this.setBullet(idx)
+                _this.setTrig(idx)
             })
-            this.isAnimate = false
+            this.animateLockimate = false
         },
 
         playNext: function () {
             var _this = this
-            this.play((_this.curIndex+1) % _this.imgLength)
+            this.play((_this.curIdx+1) % _this.picLength)
         },
 
         autoplay: function () {
