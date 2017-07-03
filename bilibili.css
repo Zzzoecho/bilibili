@@ -482,7 +482,7 @@ menu > ul > #icon:hover .icon-detail {
 }
 .hit .views-top .panel .card-mark {
     position: absolute;
-    top: 60px;
+    top: 69px;
     left: 0;
     width: 150px;
     height: 20px;
@@ -495,8 +495,11 @@ menu > ul > #icon:hover .icon-detail {
 }
 .hit .views-top .panel .card-mark .title {
     overflow: hidden;
+    width: 150px;
     height: 40px;
     margin-bottom: 5px;
+    word-wrap: break-word;
+    word-break: break-all;
 }
 .hit .views-top .panel .card-mark p:not(.title) {
     color: #99a2aa;
@@ -541,7 +544,7 @@ menu > ul > #icon:hover .icon-detail {
     background-position: 25px -1262px;
 }
 .hit .views-top .panel:hover .card-mark {
-    top: -10px;
+    top: -6px;
     height: 100px;
     background: rgba(0,0,0,0.7);
 }
@@ -554,13 +557,13 @@ menu > ul > #icon:hover .icon-detail {
 
 /****推广****/
 .ad {
-    margin: 20px 0;
+    margin-top: 20px;
     position: relative;
     padding-bottom: 35px;
 }
 .title {
     position: relative;
-    margin: 10px 0 15px 0;
+    margin: 0 0 15px 0;
 }
 .title > icon {
     vertical-align: sub;
@@ -693,6 +696,9 @@ menu > ul > #icon:hover .icon-detail {
 /****正在直播****/
 .living {
     position: relative;
+}
+.living .assam {
+    margin: 10px 0;
 }
 .living .assam img {
     width: 100%;
@@ -936,12 +942,12 @@ menu > ul > #icon:hover .icon-detail {
     width: 260px;
     float: left;
 }
-.rank .r-item {
+.rank-wrap .r-item {
     position: relative;
     padding-left: 25px;
     margin-bottom: 14px;
 }
-.rank .r-item .number {
+.number {
     position: absolute;
     top: 0;
     left: 0;
@@ -955,36 +961,36 @@ menu > ul > #icon:hover .icon-detail {
     color: #fff;
     background-color: #b8c0cc;
 }
-.rank .r-item:first-child .number,.rank .r-item:nth-child(2) .number,.rank .r-item:nth-child(3) .number {
+.rank-wrap .r-item:first-child .number,.rank-wrap .r-item:nth-child(2) .number,.rank-wrap .r-item:nth-child(3) .number {
     background-color: #f25d8e;
 }
-.rank .r-item img {
+.rank-wrap .r-item img {
     border-radius: 50%;
     margin-right: 5px;
     cursor: pointer;
 }
-.rank .r-item .r-i {
+.rank-wrap .r-item .r-i {
     display: inline-block;
     width: 180px;
     vertical-align: top;
     cursor: pointer;
 }
-.rank .r-item p {
+.rank-wrap .r-item p {
     display: inline-block;
 }
-.rank .r-item .name {
+.rank-wrap .r-item .name {
     margin-top: 5px;
     color: #99a2aa;
     width: 180px;
     max-width: 190px;
     overflow: hidden;
 }
-.rank .r-item .user .u-online {
+.rank-wrap .r-item .user .u-online {
     position: absolute;
     right: 0;
     top: 0;
 }
-.rank .r-item .user .u-online .online {
+.rank-wrap .r-item .user .u-online .online {
     width: 12px;
     height: 12px;
     margin-right: 5px;
@@ -992,12 +998,12 @@ menu > ul > #icon:hover .icon-detail {
     background-position: 0 0;
     vertical-align: text-top;
 }
-.rank .r-item .user .u-online em {
+.rank-wrap .r-item .user .u-online em {
     font-style: normal;
     color: #99a2aa;
     font-weight: 400;
 }
-.rank .r-item .r-i:hover .user span:first-child {
+.rank-wrap .r-item .r-i:hover .user span:first-child {
     color: #00a1d6;
     transition: all .2s;
 }
@@ -1037,8 +1043,19 @@ menu > ul > #icon:hover .icon-detail {
     margin-right: 2px;
 }
 /*****动画*****/
+.cartoon {
+    margin-top: 10px;
+}
 .cartoon .title .icon-cartoon {
     background-position: -141px -908px;
+}
+.l-con {
+    width: 720px;
+    float: left;
+}
+.title {
+    display: inline-block;
+    width: 700px;
 }
 .title .tabs {
     display: inline-block;
@@ -1073,6 +1090,8 @@ menu > ul > #icon:hover .icon-detail {
     float: right;
     width: 260px;
     min-height: 360px;
+    margin-top: 5px;
+    overflow: hidden;
 }
 .sec-rank .rank-head {
     height: 24px;
@@ -1087,4 +1106,115 @@ menu > ul > #icon:hover .icon-detail {
     margin-left: 20px;
     float: left;
 }
-
+.sec-rank .dropdown {
+    float: right;
+    display: inline-block;
+    position: relative;
+    padding: 0 7px;
+    height: 22px;
+    line-height: 22px;
+    border: 1px solid #ccd0d7;
+    border-radius: 4px;
+    cursor: default;
+}
+.sec-rank .dropdown .arrow-down {
+    display: inline-block;
+    background-position: -475px -157px;
+    width: 12px;
+    height: 6px;
+    margin-left: 5px;
+    margin-top: -1px;
+    vertical-align: middle;
+}
+.sec-rank .dropdown .dropdown-list {
+    display: none;
+    position: absolute;
+    left: -1px;
+    top: 21px;
+    width: 59px;
+    background-color: #fff;
+    border: 1px solid #ccd0d7;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    z-index: 10;
+}
+.sec-rank .dropdown .dropdown-list .drop-item {
+    padding: 3px 7px;
+    cursor: pointer;
+}
+.sec-rank .dropdown .dropdown-list .drop-item.choose {
+    display: none;
+}
+.sec-rank .dropdown:hover {
+    border-radius: 4px 4px 0 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,.16);
+}
+.sec-rank .dropdown:hover .dropdown-list {
+    display: block;
+}
+.sec-rank .dropdown .dropdown-list .drop-item:hover {
+    background-color: #e5e9ef;
+}
+.rank-wrap {
+    width: 200%;
+    overflow: hidden;
+    transition: all .2s linear;
+}
+.rank-list {
+    float: left;    
+    padding-bottom: 15px;
+    width: 260px;
+    min-height: 278px;
+    padding-top: 20px;
+    position: relative;
+}
+.rank-list .rank-item {
+    position: relative;
+    padding-left: 25px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+.rank-list .rank-item .r-info > .r-title {
+    line-height: 18px;
+    height: 18px;
+    overflow: hidden;
+}
+.rank-list .rank-item:first-child .number,.rank-list .rank-item:nth-child(2) .number, .rank-list .rank-item:nth-child(3) .number {
+    background-color: #f25d8e;
+}
+.rank-list .rank-item .r-info {
+    position: relative;
+    color: #222;
+}
+.rank-list .rank-item.first {
+    margin-top: 0;
+}
+.rank-list .rank-item.first img {
+    border-radius: 4px;
+    margin-right: 5px;
+}
+.rank-list .rank-item.first .r-detail {
+    float: right;
+}
+.rank-list .rank-item.first .r-detail .r-title {
+    height: 36px;
+    line-height: 18px;
+    margin-top: -3px;
+    width: 150px;
+    padding: 0;
+}
+.rank-list .rank-item.first .r-detail .r-score {
+    line-height: 12px;
+    color: #99a2aa;
+    height: 12px;
+    margin-top: 5px;
+    overflow: hidden;
+}
+.rank-list .rank-item .r-info:hover .r-title {
+    color: #00a1d6;
+}
+.rank-list .rank-item .r-info:hover .watch-later {
+    display: block;
+    right: 8px;
+    bottom: 6px;
+}
