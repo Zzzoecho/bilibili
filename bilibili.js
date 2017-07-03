@@ -16,7 +16,7 @@ $tabList.on('click', function (e) {
 //排行 tab切换 - hover
 var $rankTabs = $('.rank-head .tabs .tab-item'),
     $rankCt = $('.rank-head .tabs'),
-    $rankWrap = $('.rank-wrap')
+    $rankWrap = $('.sec-rank .rank-wrap')
 
 $rankTabs.on('mouseenter', function(){
     let $NotShown = $rankTabs.not('.on')
