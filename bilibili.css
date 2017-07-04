@@ -1221,6 +1221,8 @@ menu > ul > #icon:hover .icon-detail {
 
 /***video-info-module***/
 .video-info-module {
+    position: absolute;
+    left: 904.5px;
     width: 320px;
     border: 1px solid #ccd0d7;
     border-radius: 4px;
