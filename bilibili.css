@@ -1310,7 +1310,7 @@ menu > ul > #icon:hover .icon-detail {
     overflow: hidden;
     color: #99a2aa;
 }
-.video-info-module .v-data {
+.v-data {
     padding-top: 10px;
     color: #99a2aa;
 }
@@ -1323,17 +1323,17 @@ menu > ul > #icon:hover .icon-detail {
     color: #99a2aa;
     line-height: 12px;
 }
-.video-info-module .v-data icon {
+.v-data icon {
     margin-right: 2px;
     vertical-align: text-top;
     display: inline-block;
     width: 12px;
     height: 12px;
 }
-.video-info-module .v-data .play icon {
+.v-data .play icon {
     background-position: -282px -90px;
 }
-.video-info-module .v-data .danmu icon {
+.v-data .danmu icon {
     background-position: -282px -218px;
 }
 .video-info-module .v-data .collect icon {
@@ -1491,4 +1491,60 @@ menu > ul > #icon:hover .icon-detail {
     vertical-align: top;
     color: #99a2aa;
     margin-left: 10px;
+}
+.drama-info-module {
+    position: absolute;
+    left: 904.5px;
+    width: 320px;
+    border: 1px solid #ccd0d7;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.16);
+    box-sizing: border-box;
+    z-index: 10020;
+    overflow: hidden;
+    background-color: #fff;
+    padding: 12px;
+}
+.drama-info-module .v-preview {
+    height: 84px;
+}
+.drama-info-module .v-preview img {
+    float: left;
+    width: 72px;
+    height: 72px;
+    margin-right: 12px;
+    border-radius: 4px;
+}
+.drama-info-module .v-preview .title {
+    display: inline-block;
+    width: 100px;
+    height: 34px;
+    line-height: 34px;
+    color: #222;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+.drama-info-module .v-preview .desc {
+    height: 16px;
+    line-height: 12px;
+    font-size: 12px;
+    color: #99a2aa;
+}
+.drama-info-module .v-data {
+    margin: 0 -12px;
+    padding: 10px 12px 0;
+    border-top: 1px solid #e5e9ef;
+}
+.drama-info-module .v-data span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    width: 76px;
+    margin-right: 18px;
+    color: #99a2aa;
+    line-height: 12px;
+}
+.drama-info-module .v-data .fav icon {
+    background: url(https://s1.hdslb.com/bfs/static/phoenix/home/static/img/bangumi-zf-icon.28d5b48.png) no-repeat;
 }
