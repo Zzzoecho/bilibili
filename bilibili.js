@@ -45,33 +45,453 @@ $timeTabs.on('click', function(e){
     $timeTabs.eq(idx).addClass('on')
 
     let $on = $timeTabs.filter('.on'),
-        $noOn = $('.drama .tabs .tab-item:not(.on)')
+        $noOn = $('.drama .tabs .tab-item:not(.on)'),
+        $timingBox = $('.drama .timing-box'),
+        $tModule
     
     $on.each(function(){
-        if(idx != 0){
-            switch (idx){
-                case 1 :
-                    $timeTabs.eq(idx).text('周一')
-                    break
-                case 2 :
-                    $timeTabs.eq(idx).text('周二')
-                    break
-                case 3 :
-                    $timeTabs.eq(idx).text('周三')
-                    break
-                case 4 :
-                    $timeTabs.eq(idx).text('周四')
-                    break
-                case 5 :
-                    $timeTabs.eq(idx).text('周五')
-                    break
-                case 6 :
-                    $timeTabs.eq(idx).text('周六')
-                    break
-                case 7 :
-                    $timeTabs.eq(idx).text('周日')
-                    break
-            }
+        switch (idx){
+            case 0 :
+                $tModule = 
+                $(`<div class="card-timing-module clearfix">
+                    <a href="#" class="image" title="徒然喜欢你"><img src="http://i0.hdslb.com/bfs/bangumi/74665138be556c07804ad32e9417f640ba26f415.jpg@72w_72h.webp" alt=""></a>
+                    <div class="r-text">
+                        <a href="#" class="t" title="徒然喜欢你">徒然喜欢你</a>
+                        <p class="update on">
+                            <span>更新至<a href="#">1话</a></span>
+                        </p>
+                    </div>
+                </div>
+                <div class="card-timing-module clearfix">
+                    <a href="#" class="image" title="笨女孩"><img src="http://i0.hdslb.com/bfs/bangumi/3bac74a96282058e61b8cb526ac6baa777c79f62.jpg@72w_72h.webp" alt=""></a>
+                    <div class="r-text">
+                        <a href="#" class="t" title="笨女孩">笨女孩</a>
+                        <p class="update on">
+                            <span>更新至<a href="#">1话</a></span>
+                        </p>
+                    </div>
+                </div>
+                <div class="card-timing-module clearfix">
+                    <a href="#" class="image" title="少年阿贝 GO!GO!小芝麻 第二季"><img src="http://i0.hdslb.com/bfs/bangumi/c90f5653ac1577f2fb5f49e82897bb5754f3c1d3.jpg@72w_72h.webp" alt=""></a>
+                    <div class="r-text">
+                        <a href="#" class="t" title="少年阿贝 GO!GO!小芝麻 第二季">少年阿贝 GO!GO!小芝麻 第二季</a>
+                        <p class="update on">
+                            <span>更新至<a href="#">12话</a></span>
+                        </p>
+                    </div>
+                </div>
+                <div class="card-timing-module clearfix">
+                    <a href="#" class="image" title="美妙天堂 偶像时间"><img src="http://i0.hdslb.com/bfs/bangumi/914fe4f7265647dfbbfbb9ab9fb1f127f0706ea2.jpg@72w_72h.webp" alt=""></a>
+                    <div class="r-text">
+                        <a href="#" class="t" title="美妙天堂 偶像时间">美妙天堂 偶像时间</a>
+                        <p class="update on">
+                            <span>更新至<a href="#">14话</a></span>
+                        </p>
+                    </div>
+                </div>
+                <div class="card-timing-module clearfix">
+                    <a href="#" class="image" title="异世界食堂"><img src="http://i0.hdslb.com/bfs/bangumi/8dd926666739582371f1d835ffd1e4ad69071222.jpg@72w_72h.webp" alt=""></a>
+                    <div class="r-text">
+                        <a href="#" class="t" title="异世界食堂">异世界食堂</a>
+                        <p class="update">
+                            <span>更新至<a href="#">1话</a></span>
+                        </p>
+                    </div>
+                </div>
+                <div class="card-timing-module clearfix">
+                    <a href="#" class="image" title="妖怪公寓的幽雅日常"><img src="http://i0.hdslb.com/bfs/bangumi/7a4fa377c7b10b87764ddc069515cf739e7a4346.jpg@72w_72h.webp" alt=""></a>
+                    <div class="r-text">
+                        <a href="#" class="t" title="妖怪公寓的幽雅日常">妖怪公寓的幽雅日常</a>
+                        <p class="update">
+                            <span>更新至<a href="#">1话</a></span>
+                        </p>
+                    </div>
+                </div>
+                <div class="card-timing-module clearfix">
+                    <a href="#" class="image" title="智龙迷城X"><img src="http://i0.hdslb.com/bfs/bangumi/96f969ee26e5b77716d347111e06368de52b88c4.jpg@72w_72h.webp" alt=""></a>
+                    <div class="r-text">
+                        <a href="#" class="t" title="智龙迷城X">智龙迷城X</a>
+                        <p class="update">
+                            <span>更新至<a href="#">52话</a></span>
+                        </p>
+                    </div>
+                </div>
+                <div class="card-timing-module clearfix">
+                    <a href="#" class="image" title="暗芝居 第五季"><img src="http://i0.hdslb.com/bfs/bangumi/a1c6cc729f2159c65640160edc5aa859d0ee328e.jpg@72w_72h.webp" alt=""></a>
+                    <div class="r-text">
+                        <a href="#" class="t" title="暗芝居 第五季">暗芝居 第五季</a>
+                        <p class="update">
+                            <span>更新至<a href="#">1话</a></span>
+                        </p>
+                    </div>
+                </div>
+                <div class="card-timing-module clearfix">
+                    <a href="#" class="image" title="战斗女子高校"><img src="http://i0.hdslb.com/bfs/bangumi/2de3653b7f1d58cbce1beda4fe1a048aae13e552.jpg@72w_72h.webp" alt=""></a>
+                    <div class="r-text">
+                        <a href="#" class="t" title="战斗女子高校">战斗女子高校</a>
+                        <p class="update">
+                            <span>更新至<a href="#">1话</a></span>
+                        </p>
+                    </div>
+                </div>
+                <div class="card-timing-module clearfix">
+                    <a href="#" class="image" title="骑士&魔法"><img src="http://i0.hdslb.com/bfs/bangumi/23da35037d713db519423afa147db76e8ac39dd9.jpg@72w_72h.webp" alt=""></a>
+                    <div class="r-text">
+                        <a href="#" class="t" title="骑士&魔法">骑士&魔法</a>
+                        <p class="update">
+                            <span>更新至<a href="#">1话</a></span>
+                        </p>
+                    </div>
+                </div>
+                <div class="card-timing-module clearfix">
+                    <a href="#" class="image" title="甜甜私房猫 第三季 中配版"><img src="http://i0.hdslb.com/bfs/bangumi/56fa9a3e45129f7387fa88c9a05b9fad51cef4fc.jpg@72w_72h.webp" alt=""></a>
+                    <div class="r-text">
+                        <a href="#" class="t" title="甜甜私房猫 第三季 中配版">甜甜私房猫 第三季 中配版</a>
+                        <p class="update">
+                            <span>更新至<a href="#">25话</a></span>
+                        </p>
+                    </div>
+                </div>
+                <div class="card-timing-module clearfix">
+                    <a href="#" class="image" title="甜甜私房猫 第三季"><img src="http://i0.hdslb.com/bfs/bangumi/56fa9a3e45129f7387fa88c9a05b9fad51cef4fc.jpg@72w_72h.webp" alt=""></a>
+                    <div class="r-text">
+                        <a href="#" class="t" title="甜甜私房猫 第三季">甜甜私房猫 第三季</a>
+                        <p class="update">
+                            <span>更新至<a href="#">39话</a></span>
+                        </p>
+                    </div>
+                </div>
+                <div class="card-timing-module clearfix">
+                    <a href="#" class="image" title="Re:CREATORS"><img src="http://i0.hdslb.com/bfs/bangumi/15b3bb324583a32b2f749318f5df0feb32610fc8.jpg@72w_72h.webp" alt=""></a>
+                    <div class="r-text">
+                        <a href="#" class="t" title="Re:CREATORS">Re:CREATORS</a>
+                        <p class="update">
+                            <span>更新至<a href="#">1话</a></span>
+                        </p>
+                    </div>
+                </div>
+                <div class="card-timing-module clearfix">
+                    <a href="#" class="image" title="活撃/刀剣乱舞（僅限港澳台地區）"><img src="http://i0.hdslb.com/bfs/bangumi/30f9d9d2b46b927a0550ed8d317571fbb21db7d8.jpg@72w_72h.webp" alt=""></a>
+                    <div class="r-text">
+                        <a href="#" class="t" title="活撃/刀剣乱舞（僅限港澳台地區）">活撃/刀剣乱舞（僅限港澳台地區）</a>
+                        <p class="update">
+                            <span>更新至<a href="#">1话</a></span>
+                        </p>
+                    </div>
+                </div>
+                <div class="card-timing-module clearfix">
+                    <a href="#" class="image" title="Fate/Apocrypha"><img src="http://i0.hdslb.com/bfs/bangumi/9d9acb596ae793fe43642d33b534f5839a430265.jpg@72w_72h.webp" alt=""></a>
+                    <div class="r-text">
+                        <a href="#" class="t" title="Fate/Apocrypha">Fate/Apocrypha</a>
+                        <p class="update">
+                            <span>更新至<a href="#">1话</a></span>
+                        </p>
+                    </div>
+                </div>`)
+                $timingBox.empty().append($tModule)
+                break
+            case 1 :
+                $timeTabs.eq(idx).text('周一')
+                $tModule = 
+                $(`<div class="card-timing-module clearfix">
+                    <a href="#" class="image" title="妖怪公寓的幽雅日常"><img src="http://i0.hdslb.com/bfs/bangumi/7a4fa377c7b10b87764ddc069515cf739e7a4346.jpg@72w_72h.webp" alt=""></a>
+                    <div class="r-text">
+                        <a href="#" class="t" title="妖怪公寓的幽雅日常">妖怪公寓的幽雅日常</a>
+                        <p class="update">
+                            <span>更新至<a href="#">1话</a></span>
+                        </p>
+                    </div>
+                </div>
+                <div class="card-timing-module clearfix">
+                    <a href="#" class="image" title="天使的3P!"><img src="http://i0.hdslb.com/bfs/bangumi/8a361912ee8a6386181e8519e1d39cbdb436fd9e.jpg@72w_72h.webp" alt=""></a>
+                    <div class="r-text">
+                        <a href="#" class="t" title="天使的3P!">天使的3P!</a>
+                        <p class="update">
+                            <span>尚未更新</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="card-timing-module clearfix">
+                    <a href="#" class="image" title="战斗女子高校"><img src="http://i0.hdslb.com/bfs/bangumi/2de3653b7f1d58cbce1beda4fe1a048aae13e552.jpg@72w_72h.webp" alt=""></a>
+                    <div class="r-text">
+                        <a href="#" class="t" title="战斗女子高校">战斗女子高校</a>
+                        <p class="update">
+                            <span>更新至<a href="#">1话</a></span>
+                        </p>
+                    </div>
+                </div>
+                <div class="card-timing-module clearfix">
+                    <a href="#" class="image" title="智龙迷城X"><img src="http://i0.hdslb.com/bfs/bangumi/96f969ee26e5b77716d347111e06368de52b88c4.jpg@72w_72h.webp" alt=""></a>
+                    <div class="r-text">
+                        <a href="#" class="t" title="智龙迷城X">智龙迷城X</a>
+                        <p class="update">
+                            <span>更新至<a href="#">52话</a></span>
+                        </p>
+                    </div>
+                </div>
+                <div class="card-timing-module clearfix">
+                    <a href="#" class="image" title="暗芝居 第五季"><img src="http://i0.hdslb.com/bfs/bangumi/a1c6cc729f2159c65640160edc5aa859d0ee328e.jpg@72w_72h.webp" alt=""></a>
+                    <div class="r-text">
+                        <a href="#" class="t" title="暗芝居 第五季">暗芝居 第五季</a>
+                        <p class="update">
+                            <span>更新至<a href="#">52话</a></span>
+                        </p>
+                    </div>
+                </div>
+                `)
+                $timingBox.empty().append($tModule)
+                break
+            case 2 :
+                $timeTabs.eq(idx).text('周二')
+                $tModule = 
+                $(`<div class="card-timing-module clearfix">
+                    <a href="#" class="image" title="异世界食堂"><img src="http://i0.hdslb.com/bfs/bangumi/8dd926666739582371f1d835ffd1e4ad69071222.jpg@72w_72h.webp" alt=""></a>
+                    <div class="r-text">
+                        <a href="#" class="t" title="异世界食堂">异世界食堂</a>
+                        <p class="update">
+                            <span>更新至<a href="#">1话</a></span>
+                        </p>
+                    </div>
+                </div>
+                <div class="card-timing-module clearfix">
+                    <a href="#" class="image" title="笨女孩"><img src="http://i0.hdslb.com/bfs/bangumi/3bac74a96282058e61b8cb526ac6baa777c79f62.jpg@72w_72h.webp" alt=""></a>
+                    <div class="r-text">
+                        <a href="#" class="t" title="笨女孩">笨女孩</a>
+                        <p class="update on">
+                            <span>更新至<a href="#">1话</a></span>
+                        </p>
+                    </div>
+                </div>
+                <div class="card-timing-module clearfix">
+                    <a href="#" class="image" title="徒然喜欢你"><img src="http://i0.hdslb.com/bfs/bangumi/74665138be556c07804ad32e9417f640ba26f415.jpg@72w_72h.webp" alt=""></a>
+                    <div class="r-text">
+                        <a href="#" class="t" title="徒然喜欢你">徒然喜欢你</a>
+                        <p class="update on">
+                            <span>更新至<a href="#">1话</a></span>
+                        </p>
+                    </div>
+                </div>
+                <div class="card-timing-module clearfix">
+                    <a href="#" class="image" title="美妙天堂 偶像时间"><img src="http://i0.hdslb.com/bfs/bangumi/914fe4f7265647dfbbfbb9ab9fb1f127f0706ea2.jpg@72w_72h.webp" alt=""></a>
+                    <div class="r-text">
+                        <a href="#" class="t" title="美妙天堂 偶像时间">美妙天堂 偶像时间</a>
+                        <p class="update on">
+                            <span>更新至<a href="#">14话</a></span>
+                        </p>
+                    </div>
+                </div>
+                <div class="card-timing-module clearfix">
+                    <a href="#" class="image" title="少年阿贝 GO!GO!小芝麻 第二季"><img src="http://i0.hdslb.com/bfs/bangumi/c90f5653ac1577f2fb5f49e82897bb5754f3c1d3.jpg@72w_72h.webp" alt=""></a>
+                    <div class="r-text">
+                        <a href="#" class="t" title="少年阿贝 GO!GO!小芝麻 第二季">少年阿贝 GO!GO!小芝麻 第二季</a>
+                        <p class="update on">
+                            <span>更新至<a href="#">12话</a></span>
+                        </p>
+                    </div>
+                </div>
+                `)
+                $timingBox.empty().append($tModule)
+                break
+            case 3 :
+                $timeTabs.eq(idx).text('周三')
+                $tModule = 
+                $(`<div class="card-timing-module clearfix">
+                    <a href="#" class="image" title="博人传 火影忍者新时代"><img src="http://i0.hdslb.com/bfs/bangumi/a968da0b42034dd347e77a8efc08f8ac11448046.jpg@72w_72h.webp" alt=""></a>
+                    <div class="r-text">
+                        <a href="#" class="t" title="博人传 火影忍者新时代">博人传 火影忍者新时代</a>
+                        <p class="update">
+                            <span>更新至<a href="#">14话</a></span>
+                        </p>
+                    </div>
+                </div>
+                <div class="card-timing-module clearfix">
+                    <a href="#" class="image" title="捏造陷阱-NTR-"><img src="http://i0.hdslb.com/bfs/bangumi/3f1cdb5ad8d4398eb6b48371d7bf0cc6bd61e285.jpg@72w_72h.webp" alt=""></a>
+                    <div class="r-text">
+                        <a href="#" class="t" title="捏造陷阱-NTR-">捏造陷阱-NTR-</a>
+                        <p class="update">
+                            <span>更新至<a href="#">1话</a></span>
+                        </p>
+                    </div>
+                </div>
+                <div class="card-timing-module clearfix">
+                    <a href="#" class="image" title="第一次的辣妹"><img src="http://i0.hdslb.com/bfs/bangumi/c6173fa466c6af81871e66a18206594f85c61651.jpg@72w_72h.webp" alt=""></a>
+                    <div class="r-text">
+                        <a href="#" class="t" title="第一次的辣妹">第一次的辣妹</a>
+                        <p class="update">
+                            <span>尚未更新</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="card-timing-module clearfix">
+                    <a href="#" class="image" title="咕噜咕噜魔法阵 新系列"><img src="http://i0.hdslb.com/bfs/bangumi/0a0ade16865755cc5418e1dba0339046434109fc.jpg@72w_72h.webp" alt=""></a>
+                    <div class="r-text">
+                        <a href="#" class="t" title="咕噜咕噜魔法阵 新系列">咕噜咕噜魔法阵 新系列</a>
+                        <p class="update">
+                            <span>尚未更新</span>
+                        </p>
+                    </div>
+                </div>
+                `)
+                $timingBox.empty().append($tModule)
+                break
+            case 4 :
+                $timeTabs.eq(idx).text('周四')
+                $tModule = 
+                $(`<div class="card-timing-module clearfix">
+                    <a href="#" class="image" title="月色真美"><img src="http://i0.hdslb.com/bfs/bangumi/6cb30116f1baddf62d0e4035d45ed5e4878cf20d.jpg@72w_72h.webp" alt=""></a>
+                    <div class="r-text">
+                        <a href="#" class="t" title="月色真美">月色真美</a>
+                        <p class="update">
+                            <span>更新至<a href="#">12话</a></span>
+                        </p>
+                    </div>
+                </div>
+                <div class="card-timing-module clearfix">
+                    <a href="#" class="image" title="樱花任务"><img src="http://i0.hdslb.com/bfs/bangumi/8749c700da7b8012451146f90c7cf7dddbbbfea7.jpg@72w_72h.webp" alt=""></a>
+                    <div class="r-text">
+                        <a href="#" class="t" title="樱花任务">樱花任务</a>
+                        <p class="update">
+                            <span>更新至<a href="#">14话</a></span>
+                        </p>
+                    </div>
+                </div>
+                <div class="card-timing-module clearfix">
+                    <a href="#" class="image" title="欢迎来到实力至上主义的教室"><img src="http://i0.hdslb.com/bfs/bangumi/75b5469a3931652fbeaab17d993e2c93b5915286.jpg@72w_72h.webp" alt=""></a>
+                    <div class="r-text">
+                        <a href="#" class="t" title="欢迎来到实力至上主义的教室">欢迎来到实力至上主义的教室</a>
+                        <p class="update">
+                            <span>尚未更新</span>
+                        </p>
+                    </div>
+                </div>
+                `)
+                $timingBox.empty().append($tModule)
+                break
+            case 5 :
+                $timeTabs.eq(idx).text('周五')
+                $tModule = 
+                $(`<div class="card-timing-module clearfix">
+                    <a href="#" class="image" title="18if 梦境异闻录"><img src="http://i0.hdslb.com/bfs/bangumi/74c36b366a884c036f135035915700513ae2a61d.jpg@72w_72h.webp" alt=""></a>
+                    <div class="r-text">
+                        <a href="#" class="t" title="18if 梦境异闻录">18if 梦境异闻录</a>
+                        <p class="update">
+                            <span>尚未更新</span>
+                        </p>
+                    </div>
+                </div>
+                `)
+                $timingBox.empty().append($tModule)
+                break
+            case 6 :
+                $timeTabs.eq(idx).text('周六')
+                $tModule = 
+                $(`<div class="card-timing-module clearfix">
+                    <a href="#" class="image" title="地狱少女 宵伽"><img src="http://i0.hdslb.com/bfs/bangumi/f191e5d72e67e14f2f0ad5a40455ec322e9b77b1.jpg@72w_72h.webp" alt=""></a>
+                    <div class="r-text">
+                        <a href="#" class="t" title="地狱少女 宵伽">地狱少女 宵伽</a>
+                        <p class="update">
+                            <span>尚未更新</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="card-timing-module clearfix">
+                    <a href="#" class="image" title="独占我的英雄"><img src="http://i0.hdslb.com/bfs/bangumi/54d64c6e65d5c973c30dc9d359917bc17fe6d1d6.jpg@72w_72h.webp" alt=""></a>
+                    <div class="r-text">
+                        <a href="#" class="t" title="独占我的英雄">独占我的英雄</a>
+                        <p class="update">
+                            <span>尚未更新</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="card-timing-module clearfix">
+                    <a href="#" class="image" title="忍者少女千鸟～伊势・金崎篇～"><img src="http://i0.hdslb.com/bfs/bangumi/1592809fa2393487ffd7c5db9ecfac2ae929f59e.jpg@72w_72h.webp" alt=""></a>
+                    <div class="r-text">
+                        <a href="#" class="t" title="忍者少女千鸟～伊势・金崎篇～">忍者少女千鸟～伊势・金崎篇～</a>
+                        <p class="update">
+                            <span>更新至<a href="#">39话</a></span>
+                        </p>
+                    </div>
+                </div>
+                <div class="card-timing-module clearfix">
+                    <a href="#" class="image" title="将国之天鹰星"><img src="http://i0.hdslb.com/bfs/bangumi/19b5c126fab9abb1f623bb1a74086ec3201672fd.jpg@72w_72h.webp" alt=""></a>
+                    <div class="r-text">
+                        <a href="#" class="t" title="将国之天鹰星">将国之天鹰星</a>
+                        <p class="update">
+                            <span>尚未更新</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="card-timing-module clearfix">
+                    <a href="#" class="image" title="暖暖日记 2nd"><img src="http://i0.hdslb.com/bfs/bangumi/04bb1b115905bca728404672a8838e7e5e75440a.jpg@72w_72h.webp" alt=""></a>
+                    <div class="r-text">
+                        <a href="#" class="t" title="暖暖日记 2nd">暖暖日记 2nd</a>
+                        <p class="update">
+                            <span>更新至<a href="#">64话</a></span>
+                        </p>
+                    </div>
+                </div>
+                `)
+                $timingBox.empty().append($tModule)
+                break
+            case 7 :
+                $timeTabs.eq(idx).text('周日')
+                $tModule = 
+                $(`<div class="card-timing-module clearfix">
+                    <a href="#" class="image" title="Re:CREATORS"><img src="http://i0.hdslb.com/bfs/bangumi/15b3bb324583a32b2f749318f5df0feb32610fc8.jpg@72w_72h.webp" alt=""></a>
+                    <div class="r-text">
+                        <a href="#" class="t" title="Re:CREATORS">Re:CREATORS</a>
+                        <p class="update">
+                            <span>更新至<a href="#">1话</a></span>
+                        </p>
+                    </div>
+                </div>
+                <div class="card-timing-module clearfix">
+                    <a href="#" class="image" title="Fate/Apocrypha"><img src="http://i0.hdslb.com/bfs/bangumi/9d9acb596ae793fe43642d33b534f5839a430265.jpg@72w_72h.webp" alt=""></a>
+                    <div class="r-text">
+                        <a href="#" class="t" title="Fate/Apocrypha">Fate/Apocrypha</a>
+                        <p class="update">
+                            <span>更新至<a href="#">1话</a></span>
+                        </p>
+                    </div>
+                </div>
+                <div class="card-timing-module clearfix">
+                    <a href="#" class="image" title="骑士&魔法"><img src="http://i0.hdslb.com/bfs/bangumi/23da35037d713db519423afa147db76e8ac39dd9.jpg@72w_72h.webp" alt=""></a>
+                    <div class="r-text">
+                        <a href="#" class="t" title="骑士&魔法">骑士&魔法</a>
+                        <p class="update">
+                            <span>更新至<a href="#">1话</a></span>
+                        </p>
+                    </div>
+                </div>
+                <div class="card-timing-module clearfix">
+                    <a href="#" class="image" title="活撃/刀剣乱舞（僅限港澳台地區）"><img src="http://i0.hdslb.com/bfs/bangumi/30f9d9d2b46b927a0550ed8d317571fbb21db7d8.jpg@72w_72h.webp" alt=""></a>
+                    <div class="r-text">
+                        <a href="#" class="t" title="活撃/刀剣乱舞（僅限港澳台地區）">活撃/刀剣乱舞（僅限港澳台地區）</a>
+                        <p class="update">
+                            <span>更新至<a href="#">1话</a></span>
+                        </p>
+                    </div>
+                </div>
+                <div class="card-timing-module clearfix">
+                    <a href="#" class="image" title="甜甜私房猫 第三季"><img src="http://i0.hdslb.com/bfs/bangumi/56fa9a3e45129f7387fa88c9a05b9fad51cef4fc.jpg@72w_72h.webp" alt=""></a>
+                    <div class="r-text">
+                        <a href="#" class="t" title="甜甜私房猫 第三季">甜甜私房猫 第三季</a>
+                        <p class="update">
+                            <span>更新至<a href="#">39话</a></span>
+                        </p>
+                    </div>
+                </div>
+                <div class="card-timing-module clearfix">
+                    <a href="#" class="image" title="人马少女的烦恼"><img src="http://i0.hdslb.com/bfs/bangumi/3d8f4fab61a072004ec438dbd94569027d599c5c.jpg@72w_72h.webp" alt=""></a>
+                    <div class="r-text">
+                        <a href="#" class="t" title="人马少女的烦恼">人马少女的烦恼</a>
+                        <p class="update">
+                            <span>尚未更新</span>
+                        </p>
+                    </div>
+                </div>`)
+                $timingBox.empty().append($tModule)
+                break
         }
     })
 
