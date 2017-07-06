@@ -20,7 +20,7 @@
     height: 248px;
     border-radius: 4px;
 }
-.carousel-module .info {
+.living .carousel-module .info {
     position: absolute;
     bottom: 24px;
     width: 100%;
@@ -47,7 +47,7 @@
     opacity: 1;
     z-index: 10;
 }
-.carousel-module .trig {
+.living .carousel-module .trig {
     position: absolute;
     bottom: 0;
     width: 100%;

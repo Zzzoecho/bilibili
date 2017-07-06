@@ -1061,6 +1061,7 @@ menu > ul > #icon:hover .icon-detail {
     display: inline-block;
     margin-left: 50px;
     margin-bottom: 2px;
+    vertical-align: middle;
 }
 .title .hot {
     position: absolute;
@@ -1547,4 +1548,111 @@ menu > ul > #icon:hover .icon-detail {
 }
 .drama-info-module .v-data .fav icon {
     background: url(https://s1.hdslb.com/bfs/static/phoenix/home/static/img/bangumi-zf-icon.28d5b48.png) no-repeat;
+}
+/****番剧动态****/
+.drama-trend .title span {
+    left: 0;
+    top: 0;
+    font-size: 18px;
+}
+.drama-trend .title .tabs {
+    margin-left: 80px;
+}
+.drama-trend .title .hot {
+    top: -2px;
+    left: 200px;
+}
+.drama-trend .title .sub {
+    top: 1px;
+}
+.drama-trend .video-ct .video .crown {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 24px;
+    pointer-events: none;
+}
+.drama-trend .video-ct .video .icon-golden {
+    background-position: -849px -148px;
+}
+.drama-trend .video-ct .video .icon-silvery {
+    background-position: -849px -212px;
+}
+.drama-trend  .command h3{
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 17px;
+}
+.drama-trend .r-con {
+    width: 260px;
+    float: right;
+}
+.drama-trend .command-module {
+    position: relative;
+    width: 260px;
+    height: 268px;
+    overflow: hidden;
+    
+}
+.drama-trend .command-module .picture {
+    /*position: absolute;*/
+    width: 520px;
+}
+.drama-trend .command-module .picture li {
+    float: left;
+}
+.drama-trend .command-module .picture li img {
+    width: 260px;
+    height: 268px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.drama-trend  .command-module .info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-size: 12px;
+}
+.drama-trend  .command-module .info li {
+    position: absolute;
+    bottom: 7px;
+    padding-left: 10px;
+    opacity: 0;
+    z-index: -1;
+}
+.drama-trend  .command-module .info a {
+    display: inline-block;
+    color: #fff;
+    overflow: hidden;
+}
+.drama-trend  .command-module .info li.active {
+    opacity: 1;
+    z-index: 10;
+}
+.drama-trend  .command-module .trig {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    z-index: 5;
+    text-align: right;
+    border-radius: 0 0 4px 4px;
+    background: -webkit-linear-gradient(transparent,rgba(0,0,0,.5));
+}
+.drama-trend  .command-module .trig span {
+    display: inline-block;
+    height: 6px;
+    width: 10px;
+    margin-right: 8px;
+    background-color: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all .3s;
+}
+.drama-trend  .command-module .trig span.on {
+    width: 30px;
+    background-color: #f45d8f;
 }
