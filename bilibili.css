@@ -533,12 +533,12 @@ menu > ul > #icon:hover .icon-detail {
     transition: all .3s;
     cursor: pointer;
 }
-.hit .views-top .yesterday {
+.hit .views-top .l-btn {
     left: 20px;
     padding: 13px 5px 13px 10px;
     background-position: 6px -1211px;
 }
-.hit .views-top .week {
+.hit .views-top .r-btn {
     right: 0;
     padding: 13px 10px 13px 5px;
     background-position: 25px -1262px;

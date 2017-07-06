@@ -68,7 +68,7 @@ Rotation = (function () {
 
         autoplay: function () {
             var _this = this
-            setInterval(_this.playNext.bind(this), 6000)
+            var peas = setInterval(_this.playNext.bind(this), 6000)
         }
     }
 
