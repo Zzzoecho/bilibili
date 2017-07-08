@@ -264,7 +264,433 @@ $tabList.on('click', function (e) {
         'margin-left': -260 * idx
     }, 300)
 })
-//title tab切换 - click
+
+//title 新动态-新投稿 tab切换 - click
+// 动画
+var $tabs = $('.cartoon .l-con .tabs .tab-item'),
+    $videoCt = $('.cartoon .l-con .video-ct')
+
+$tabs.on('click', function(e){
+    let idx = $tabs.index(e.target),
+        content = $tabs.eq(idx).text(),
+        $videoModule
+
+    $tabs.siblings().removeClass('on').eq(idx).addClass('on')
+    switch (content){
+        case '最新投稿':
+            $videoModule = 
+            $(`<div class="video">
+                <div class="mask">
+                </div>
+                <img src="http://i1.hdslb.com/bfs/archive/bd1da01f991f1e8435a6e5467ab9c2901f21831d.jpg@160w_100h.webp" alt="吸血鬼的想法">
+                <span>01:55</span>
+                <div class="watch-later"></div>
+                <a href="#">吸血鬼的想法</a>
+                <p class="num">
+                    <span class="play"><icon></icon>0</span>
+                    <span class="danmu"><icon></icon>0</span>
+                </p>
+            </div>
+            <div class="video">
+                <div class="mask">
+                </div>
+                <img src="http://i1.hdslb.com/bfs/archive/e7c6d7a1bdcca841eec188ca9b9908cb05f52d36.jpg@160w_100h.webp" alt="Angel Beats! 约定">
+                <span>06:07</span>
+                <div class="watch-later"></div>
+                <a href="#">Angel Beats! 约定</a>
+                <p class="num">
+                    <span class="play"><icon></icon>0</span>
+                    <span class="danmu"><icon></icon>0</span>
+                </p>
+            </div>
+            <div class="video">
+                <div class="mask">
+                </div>
+                <img src="http://i0.hdslb.com/bfs/archive/8c0febd053bd6a5b716413cfa1a4918d8058d16c.jpg@160w_100h.webp" alt="/川妹妹/王者荣耀大乔配音">
+                <span>02:02</span>
+                <div class="watch-later"></div>
+                <a href="#">/川妹妹/王者荣耀大乔配音</a>
+                <p class="num">
+                    <span class="play"><icon></icon>0</span>
+                    <span class="danmu"><icon></icon>0</span>
+                </p>
+            </div>
+            <div class="video">
+                <div class="mask">
+                </div>
+                <img src="http://i0.hdslb.com/bfs/archive/4ec2f1fde90daf99021a857edd922b8fbc3e449d.png@160w_100h.webp" alt="蜡笔小新-我们全家去北海道【合集】">
+                <span>43:06</span>
+                <div class="watch-later"></div>
+                <a href="#">蜡笔小新-我们全家去北海道【合集】</a>
+                <p class="num">
+                    <span class="play"><icon></icon>1</span>
+                    <span class="danmu"><icon></icon>0</span>
+                </p>
+            </div>
+            <div class="video">
+                <div class="mask">
+                </div>
+                <img src="http://i1.hdslb.com/bfs/archive/1a0742c7a810ad8691bf108b051789c07a367f3d.jpg@160w_100h.webp" alt="【桃源恋歌MMD】听说桃源恋歌血洗B站？诶嘿我也来">
+                <span>03:48</span>
+                <div class="watch-later"></div>
+                <a href="#">【桃源恋歌MMD】听说桃源恋歌血洗B站？诶嘿我也来</a>
+                <p class="num">
+                    <span class="play"><icon></icon>1</span>
+                    <span class="danmu"><icon></icon>0</span>
+                </p>
+            </div>
+            <div class="video">
+                <div class="mask">
+                </div>
+                <img src="http://i0.hdslb.com/bfs/archive/198b015fba8a7b4cc9c62ab01dbab374bd63698e.png@160w_100h.webp" alt="【催泪向/AMV/综漫】你能否记得那个曾经的女孩">
+                <span>04:43</span>
+                <div class="watch-later"></div>
+                <a href="#">【催泪向/AMV/综漫】你能否记得那个曾经的女孩</a>
+                <p class="num">
+                    <span class="play"><icon></icon>1</span>
+                    <span class="danmu"><icon></icon>0</span>
+                </p>
+            </div>
+            <div class="video">
+                <div class="mask">
+                </div>
+                <img src="http://i1.hdslb.com/bfs/archive/634efb78aefb2ade0af6218861acb3c77198fdb6.png@160w_100h.webp" alt="蜡笔小新-尿尿的规矩真困难">
+                <span>07:07</span>
+                <div class="watch-later"></div>
+                <a href="#">蜡笔小新-尿尿的规矩真困难</a>
+                <p class="num">
+                    <span class="play"><icon></icon>1</span>
+                    <span class="danmu"><icon></icon>0</span>
+                </p>
+            </div>
+            <div class="video">
+                <div class="mask">
+                </div>
+                <img src="http://i2.hdslb.com/bfs/archive/cc5956e14d62a9a7ebc43e4d167d43469f3dbfbd.jpg@160w_100h.webp" alt="《FACE》">
+                <span>02:15</span>
+                <div class="watch-later"></div>
+                <a href="#">《FACE》</a>
+                <p class="num">
+                    <span class="play"><icon></icon>0</span>
+                    <span class="danmu"><icon></icon>0</span>
+                </p>
+            </div>
+            `)
+            $videoCt.empty().append($videoModule)
+            break
+        case '有新动态':
+            $videoModule = 
+            $(`<div class="video">
+                    <div class="mask">
+                    </div>
+                    <img src="http://i0.hdslb.com/bfs/archive/c822078cb0e4c555384e3748d1584e61df6057ed.jpg@160w_100h.webp" alt="【童年之声】《海绵宝宝》角色及国语配音演员">
+                    <span>05:55</span>
+                    <div class="watch-later"></div>
+                    <a href="#">【童年之声】《海绵宝宝》角色及国语配音演员</a>
+                    <p class="num">
+                        <span class="play"><icon></icon>2.8万</span>
+                        <span class="danmu"><icon></icon>448</span>
+                    </p>
+                </div>
+                <div class="video">
+                    <div class="mask">
+                    </div>
+                    <img src="http://i0.hdslb.com/bfs/archive/9ba9ad6f6df0c66faedcff84cbcd2cb31f98a67c.jpg@160w_100h.webp" alt="【火影忍者】 宁雏兄妹的对决 （中忍考试篇）">
+                    <span>02:59</span>
+                    <div class="watch-later"></div>
+                    <a href="#">【火影忍者】 宁雏兄妹的对决 （中忍考试篇）</a>
+                    <p class="num">
+                        <span class="play"><icon></icon>1355</span>
+                        <span class="danmu"><icon></icon>25</span>
+                    </p>
+                </div>
+                <div class="video">
+                    <div class="mask">
+                    </div>
+                    <img src="http://i2.hdslb.com/bfs/archive/d56b571c585d0609e0d2716f238711bfc705d7d5.jpg@160w_100h.webp" alt="【幻想嘉年华】 fate部分全剪辑！！Part2补完篇">
+                    <span>68:29</span>
+                    <div class="watch-later"></div>
+                    <a href="#">【幻想嘉年华】 fate部分全剪辑！！Part2补完篇</a>
+                    <p class="num">
+                        <span class="play"><icon></icon>48.5万</span>
+                        <span class="danmu"><icon></icon>2.0万</span>
+                    </p>
+                </div>
+                <div class="video">
+                    <div class="mask">
+                    </div>
+                    <img src="http://i2.hdslb.com/bfs/archive/48609b6aaaf40d790e7ea25dd7ff5dd270b33655.jpg@160w_100h.webp" alt="【王者荣耀手书】半全员向—Connecting">
+                    <span>05:00</span>
+                    <div class="watch-later"></div>
+                    <a href="#">【王者荣耀手书】半全员向—Connecting</a>
+                    <p class="num">
+                        <span class="play"><icon></icon>506</span>
+                        <span class="danmu"><icon></icon>90</span>
+                    </p>
+                </div>
+                <div class="video">
+                    <div class="mask">
+                    </div>
+                    <img src="http://i0.hdslb.com/bfs/archive/a498f860a035128580c3e5c0f43b0ee605e7fd0b.jpg@160w_100h.webpp" alt="bilibili Moe 2017 动画角色人气大赏日本动画场宣传PV">
+                    <span>02:48</span>
+                    <div class="watch-later"></div>
+                    <a href="#">bilibili Moe 2017 动画角色人气大赏日本动画场宣传PV</a>
+                    <p class="num">
+                        <span class="play"><icon></icon>21.4万</span>
+                        <span class="danmu"><icon></icon>6314</span>
+                    </p>
+                </div>
+                <div class="video">
+                    <div class="mask">
+                    </div>
+                    <img src="http://i1.hdslb.com/bfs/archive/6fa0979d2bc2fecaa25cdda423f8fd2894b04b48.jpg@160w_100h.webp" alt="【MMD|剑网3|卖萌向】俄罗斯套娃（双爹组，苍爹×琴爹）">
+                    <span>03:32</span>
+                    <div class="watch-later"></div>
+                    <a href="#">【MMD|剑网3|卖萌向】俄罗斯套娃（双爹组，苍爹×琴爹）</a>
+                    <p class="num">
+                        <span class="play"><icon></icon>1538</span>
+                        <span class="danmu"><icon></icon>26</span>
+                    </p>
+                </div>
+                <div class="video">
+                    <div class="mask">
+                    </div>
+                    <img src="http://i0.hdslb.com/bfs/archive/85d66a12d3fe31d89ad48c554d844589a3bd5253.jpg@160w_100h.webp" alt="【约会大作战】黑白琴里参上！五河琴里让人印象深刻时和被封印（kiss）的片段">
+                    <span>18:59</span>
+                    <div class="watch-later"></div>
+                    <a href="#">【约会大作战】黑白琴里参上！五河琴里让人印象深刻时和被封印（kiss）的片段</a>
+                    <p class="num">
+                        <span class="play"><icon></icon>6011</span>
+                        <span class="danmu"><icon></icon>336</span>
+                    </p>
+                </div>
+                <div class="video">
+                    <div class="mask">
+                    </div>
+                    <img src="http://i0.hdslb.com/bfs/archive/705045833dc5bbf5bc72ec7e6056d8b99f67fc62.jpg@160w_100h.webp" alt="【泛式/单集MAD】一拳超人: 深海王篇——不屈的正义">
+                    <span>05:05</span>
+                    <div class="watch-later"></div>
+                    <a href="#">【泛式/单集MAD】一拳超人: 深海王篇——不屈的正义</a>
+                    <p class="num">
+                        <span class="play"><icon></icon>14.3万</span>
+                        <span class="danmu"><icon></icon>9540</span>
+                    </p>
+                </div>
+            `)
+            $videoCt.empty().append($videoModule)
+            break
+    }
+})
+//番剧动态
+var $dTabs = $('.drama-trend .l-con .tabs .tab-item'),
+    $dVideoCt = $('.drama-trend .l-con .video-ct')
+
+$dTabs.on('click', function(e){
+    let idx = $dTabs.index(e.target),
+        content = $dTabs.eq(idx).text(),
+        $dModule
+
+    $dTabs.siblings().removeClass('on').eq(idx).addClass('on')
+    switch (content){
+        case '最新投稿':
+            $dModule = 
+            $(`<div class="video">
+                <div class="mask">
+                </div>
+                <img src="http://i0.hdslb.com/bfs/archive/8c0febd053bd6a5b716413cfa1a4918d8058d16c.jpg@160w_100h.webp" alt="/川妹妹/王者荣耀大乔配音">
+                <span>02:02</span>
+                <div class="watch-later"></div>
+                <a href="#">/川妹妹/王者荣耀大乔配音</a>
+                <p class="num">
+                    <span class="play"><icon></icon>0</span>
+                    <span class="danmu"><icon></icon>0</span>
+                </p>
+            </div>
+            <div class="video">
+                <div class="mask">
+                </div>
+                <img src="http://i0.hdslb.com/bfs/archive/c4c7cc68679aed963f06e6f32aaca5cf85527a2f.jpg@160w_100h.webp" alt="【广播生肉】广播「异世界食堂」 第01回">
+                <span>39:03</span>
+                <div class="watch-later"></div>
+                <a href="#">【广播生肉】广播「异世界食堂」 第01回</a>
+                <p class="num">
+                    <span class="play"><icon></icon>76</span>
+                    <span class="danmu"><icon></icon>0</span>
+                </p>
+            </div>
+            <div class="video">
+                <div class="mask">
+                </div>
+                <img src="http://i0.hdslb.com/bfs/archive/198b015fba8a7b4cc9c62ab01dbab374bd63698e.png@160w_100h.webp" alt="【催泪向/AMV/综漫】你能否记得那个曾经的女孩">
+                <span>04:43</span>
+                <div class="watch-later"></div>
+                <a href="#">【催泪向/AMV/综漫】你能否记得那个曾经的女孩</a>
+                <p class="num">
+                    <span class="play"><icon></icon>1</span>
+                    <span class="danmu"><icon></icon>0</span>
+                </p>
+            </div>
+            <div class="video">
+                <div class="mask">
+                </div>
+                <img src="http://i0.hdslb.com/bfs/archive/4ec2f1fde90daf99021a857edd922b8fbc3e449d.png@160w_100h.webp" alt="蜡笔小新-我们全家去北海道【合集】">
+                <span>43:06</span>
+                <div class="watch-later"></div>
+                <a href="#">蜡笔小新-我们全家去北海道【合集】</a>
+                <p class="num">
+                    <span class="play"><icon></icon>1</span>
+                    <span class="danmu"><icon></icon>0</span>
+                </p>
+            </div>
+            <div class="video">
+                <div class="mask">
+                </div>
+                <img src="http://i1.hdslb.com/bfs/archive/e7c6d7a1bdcca841eec188ca9b9908cb05f52d36.jpg@160w_100h.webp" alt="Angel Beats! 约定">
+                <span>06:07</span>
+                <div class="watch-later"></div>
+                <a href="#">Angel Beats! 约定</a>
+                <p class="num">
+                    <span class="play"><icon></icon>0</span>
+                    <span class="danmu"><icon></icon>0</span>
+                </p>
+            </div>
+            <div class="video">
+                <div class="mask">
+                </div>
+                <img src="http://i1.hdslb.com/bfs/archive/27c4f7f01092fbe3bf646a986c85f3710de53a21.jpg@160w_100h.webp" alt="《魔導少年劇場版：龍之淚》 (Fairy Tail  Dragon Cry) HK電影預告">
+                <span>01:32</span>
+                <div class="watch-later"></div>
+                <a href="#">《魔導少年劇場版：龍之淚》 (Fairy Tail  Dragon Cry) HK電影預告</a>
+                <p class="num">
+                    <span class="play"><icon></icon>75</span>
+                    <span class="danmu"><icon></icon>0</span>
+                </p>
+            </div>
+            <div class="video">
+                <div class="mask">
+                </div>
+                <img src="http://i1.hdslb.com/bfs/archive/634efb78aefb2ade0af6218861acb3c77198fdb6.png@160w_100h.webp" alt="蜡笔小新-尿尿的规矩真困难">
+                <span>07:07</span>
+                <div class="watch-later"></div>
+                <a href="#">蜡笔小新-尿尿的规矩真困难</a>
+                <p class="num">
+                    <span class="play"><icon></icon>1</span>
+                    <span class="danmu"><icon></icon>0</span>
+                </p>
+            </div>
+            <div class="video">
+                <div class="mask">
+                </div>
+                <img src="http://i1.hdslb.com/bfs/archive/2bc7881977b917d40cfde88e3fbdee912180c5f1.jpg@160w_100h.webp" alt="【厨房秘密】立花慎之介×铃村健一×平川大辅（5）">
+                <span>10:45</span>
+                <div class="watch-later"></div>
+                <a href="#">【厨房秘密】立花慎之介×铃村健一×平川大辅（5）</a>
+                <p class="num">
+                    <span class="play"><icon></icon>22</span>
+                    <span class="danmu"><icon></icon>0</span>
+                </p>
+            </div>
+            `)
+            $dVideoCt.empty().append($dModule)
+            break
+        case '有新动态':
+            $dModule = 
+            $(`<div class="video">
+                    <div class="mask">
+                    </div>
+                    <img src="https://i0.hdslb.com/bfs/archive/550b5c571fd513efa36ab4eef8faf0a4a6e76c5a.jpg@160w_100h.webp" alt="【合集】染红的街道">
+                    <span>299:21</span>
+                    <a href="#">【合集】染红的街道</a>
+                    <p class="num">
+                        <span class="play"><icon></icon>43.9万</span>
+                        <span class="danmu"><icon></icon>1.9万</span>
+                    </p>
+                </div>
+                <div class="video">
+                    <div class="mask">
+                    </div>
+                    <img src="http://i1.hdslb.com/bfs/archive/d6669e485ff4155f12db2cb98c1c3799cc83d245.jpg@160w_100h.webp" alt="【合集】网球王子">
+                    <span>3936:59</span>
+                    <a href="#">【合集】网球王子</a>
+                    <p class="num">
+                        <span class="play"><icon></icon>55.2万</span>
+                        <span class="danmu"><icon></icon>6.8万</span>
+                    </p>
+                </div>
+                <div class="video">
+                    <div class="mask">
+                    </div>
+                    <img src="https://i2.hdslb.com/bfs/archive/8f7e8e544cc86bf1d952bcaa20758359b3668799.jpg@160w_100h.webp" alt="【10月】野良神 ARAGOTO 第二季 10【独家正版】">
+                    <span>24:29</span>
+                    <a href="#">【10月】野良神 ARAGOTO 第二季 10【独家正版】</a>
+                    <p class="num">
+                        <span class="play"><icon></icon>322.8万</span>
+                        <span class="danmu"><icon></icon>21.5万</span>
+                    </p>
+                </div>
+                <div class="video">
+                    <div class="mask">
+                    </div>
+                    <img src="http://i0.hdslb.com/bfs/archive/351692bd1a6a532ef258e2be9f2d0c6f6235070b.jpg@160w_100h.webp" alt="【4月】Fate/stay night -UBW- 24">
+                    <span>48:00</span>
+                    <a href="#">【4月】Fate/stay night -UBW- 24</a>
+                    <p class="num">
+                        <span class="play"><icon></icon>433.5万</span>
+                        <span class="danmu"><icon></icon>21.1万</span>
+                    </p>
+                </div>
+                <div class="video">
+                    <div class="mask">
+                    </div>
+                    <img src="http://i2.hdslb.com/bfs/archive/fccbeeff26706b04d81a3b20f006e03b21be5159.jpg@160w_100h.webp" alt="【10月/完结】TRINITY SEVEN 七人魔法使 12">
+                    <span>47:19</span>
+                    <a href="#">【10月/完结】TRINITY SEVEN 七人魔法使 12</a>
+                    <p class="num">
+                        <span class="play"><icon></icon>166.8万</span>
+                        <span class="danmu"><icon></icon>2.6万</span>
+                    </p>
+                </div>
+                <div class="video">
+                    <div class="mask">
+                    </div>
+                    <img src="https://i2.hdslb.com/bfs/archive/d5a8dbbdb580655460f54602667858d0c6a9fbd7.jpg@160w_100h.webp" alt="【4月】埃罗芒阿老师 06【独家正版】">
+                    <icon class="icon-golden crown"></icon>
+                    <span>23:41</span>
+                    <a href="#">【4月】埃罗芒阿老师 06【独家正版】</a>
+                    <p class="num">
+                        <span class="play"><icon></icon>396.8万</span>
+                        <span class="danmu"><icon></icon>12万</span>
+                    </p>
+                </div>
+                <div class="video">
+                    <div class="mask">
+                    </div>
+                    <img src="https://i0.hdslb.com/bfs/archive/348acddd00dd95388a5123a7d8dff08ef4b343be.jpg@160w_100h.webp" alt="【4月/完结】食戟之灵 24">
+                    <icon class="icon-golden crown"></icon>
+                    <span>24:41</span>
+                    <a href="#">【4月/完结】食戟之灵 24</a>
+                    <p class="num">
+                        <span class="play"><icon></icon>311.2万</span>
+                        <span class="danmu"><icon></icon>14.0万</span>
+                    </p>
+                </div>
+                <div class="video">
+                    <div class="mask">
+                    </div>
+                    <img src="https://i0.hdslb.com/bfs/archive/01b46c4d4974208a3730a3b48838b0840ecd66f7.jpg@160w_100h.webp" alt="【7月】徒然喜欢你 01">
+                    <icon class="icon-silvery crown"></icon>
+                    <span>12:31</span>
+                    <a href="#">【7月】徒然喜欢你 01</a>
+                    <p class="num">
+                        <span class="play"><icon></icon>49.6万</span>
+                        <span class="danmu"><icon></icon>2.0万</span>
+                    </p>
+                </div>
+            `)
+            $dVideoCt.empty().append($dModule)
+            break
+    }
+})
 
 //排行 tab切换 - hover
 var $rankTabs = $('.common .rank-head .tabs .tab-item'),
@@ -2120,28 +2546,28 @@ function dramaModule(){
                 
                 switch (number){
                     case '1':
-                        $('.drama-info-module').css('top', 1536)
+                        $('.drama-info-module').css('top', 1537)
                         break
                     case '2':
-                        $('.drama-info-module').css('top', 1575)
+                        $('.drama-info-module').css('top', 1577)
                         break
                     case '3':
-                        $('.drama-info-module').css('top', 1610)
+                        $('.drama-info-module').css('top', 1613)
                         break
                     case '4':
-                        $('.drama-info-module').css('top', 1647)
+                        $('.drama-info-module').css('top', 1652)
                         break
                     case '5':
-                        $('.drama-info-module').css('top', 1686)
+                        $('.drama-info-module').css('top', 1690)
                         break
                     case '6':
-                        $('.drama-info-module').css('top', 1724)
+                        $('.drama-info-module').css('top', 1729)
                         break
                     case '7':
-                        $('.drama-info-module').css('top', 1762)
+                        $('.drama-info-module').css('top', 1767)
                         break
                     case '8':
-                        $('.drama-info-module').css('top', 1800)
+                        $('.drama-info-module').css('top', 1805)
                         break
                     case '9':
                         $('.drama-info-module').css('top', 1840)
@@ -2233,3 +2659,48 @@ function Easycarousel(){
     } 
 
 new Easycarousel()
+
+//侧边栏
+var $elevator = $('.elevator-module'),
+    $navItem = $('.elevator-module .nav-list .item'),
+    $appDown = $('.elevator-module '),
+    $appIcon = $('.elevator-module .app-icon'),
+    $content = $('.content')
+
+$navItem.on('click', function(e){
+    let idx = $navItem.index(e.target),
+        jumpTo = $navItem.eq(idx).attr('data-index')
+
+    switch (jumpTo){
+        case '0':
+        console.log('0 go')
+            $(window).scrollTop(700)
+            break
+        case '1':
+            $(window).scrollTop(1200)
+            break
+        case '2':
+            $(window).scrollTop(1600)
+            break
+        case '3':
+            $(window).scrollTop(2200)
+            break
+    }
+})
+$(window).on('scroll', function(){
+    let distance = $(window).scrollTop()
+    console.log(distance)
+    if(distance < 400){
+        $navItem.siblings().removeClass('on')
+    }else if( distance > 700 && distance < 1100){
+        $navItem.siblings().removeClass('on').eq(0).addClass('on')
+    }else if (distance > 1100 && distance < 1550){
+        $navItem.siblings().removeClass('on').eq(1).addClass('on')
+    }else if (distance > 1550 && distance < 2200){
+        $navItem.siblings().removeClass('on').eq(2).addClass('on')
+    }
+    
+})
+$('.back-top').on('click', function(){
+    $(window).scrollTop(0)
+})

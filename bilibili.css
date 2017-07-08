@@ -1656,3 +1656,113 @@ menu > ul > #icon:hover .icon-detail {
     width: 30px;
     background-color: #f45d8f;
 }
+
+/****侧边栏****/
+.elevator-module {
+    display: inline-block;
+    margin-left: 500px;
+    position: fixed;
+    top: 232px;
+    z-index: 10;
+    left: 50%;
+    transition: all .3s;
+}
+.elevator-module .nav-bg {
+    opacity: 0;
+    top: -15px;
+    right: 0;
+    height: 100%;
+    padding-bottom: 20px;
+    width: 60px;
+    position: absolute;
+    background: hsla(0,0%,100%,.8);
+    border-radius: 4px;
+    overflow: hidden;
+    transition: all .3s cubic-bezier(.68,-.55,.27,1.55);
+}
+.elevator-module .nav-list {
+    position: relative;
+    background-color: #f6f9fa;
+    border: 1px solid #e5e9ef;
+    overflow: hidden;
+    border-radius: 4px;
+}
+.elevator-module .nav-list .item {
+    width: 48px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    transition: background-color .3s,color .3s;
+    cursor: pointer;
+}
+.elevator-module .nav-list .item:hover {
+    background-color: #00a1d6;
+    color: #fff;
+}
+.elevator-module .nav-list .item.on {
+    background-color: #00a1d6;
+    color: #fff;
+}
+.elevator-module .back-top:hover {
+    background-color: #00a1d6;
+    background-position: -714px -72px;
+    border-color: #00a1d6;
+}
+.elevator-module .s-line {
+    position: relative;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    height: 9px;
+    width: 30px;
+    margin: 0 auto;
+}
+.elevator-module .back-top {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    height: 48px;
+    background-position: -648px -72px;
+    background-color: #f6f9fa;
+    border: 1px solid #e5e9ef;
+    overflow: hidden;
+    border-radius: 4px;
+    background-image: url(https://s1.hdslb.com/bfs/static/phoenix/home/static/img/icons.afbff55.png)
+}
+.elevator-module .app-download {
+    position: relative;
+    width: 50px;
+    height: 70px;
+    transition: all .3s;
+}
+.elevator-module .app-download .app-icon {
+    position: absolute;
+    left: -15px;
+    width: 80px;
+    height: 80px;
+    transition: all .3s;
+    background-image: url(https://s1.hdslb.com/bfs/static/phoenix/home/static/img/app-download.4e2e397.png);
+}
+.elevator-module .app-download .app-tips-icon {
+    display: none;
+    position: absolute;
+    left: -110px;
+    top: -20px;
+    width: 106px;
+    height: 44px;
+    transition: all .3s;
+    background-image: url(https://s1.hdslb.com/bfs/static/phoenix/home/static/img/app-download-tips.38d6c39.png);
+}
+@keyframes standup {
+    0% {background-position-x: 0}
+    25% {background-position-x: -200px}
+    50% {background-position-x: -400px}
+    75% {background-position-x: -600px}
+    100% {background-position-x: -800px}
+}
+.elevator-module .app-download:hover .app-tips-icon {
+    display: block;
+}
+.elevator-module .app-download:hover .app-icon {
+    animation: standup .2s;
+    background-position-x: -800px;
+}
