@@ -2586,7 +2586,6 @@ function dramaModule(){
 }
 
 //简易轮播 2张图来回
-
 function Easycarousel(){
     this.init()
     this.bind()
@@ -2663,10 +2662,11 @@ new Easycarousel()
 //侧边栏
 var $elevator = $('.elevator-module'),
     $navItem = $('.elevator-module .nav-list .item'),
-    $appDown = $('.elevator-module '),
+    $appDown = $('.elevator-module .app-download'),
     $appIcon = $('.elevator-module .app-icon'),
     $content = $('.content')
 
+//跳转
 $navItem.on('click', function(e){
     let idx = $navItem.index(e.target),
         jumpTo = $navItem.eq(idx).attr('data-index')
@@ -2687,9 +2687,10 @@ $navItem.on('click', function(e){
             break
     }
 })
+//滚动到对应内容 item变色
 $(window).on('scroll', function(){
     let distance = $(window).scrollTop()
-    console.log(distance)
+
     if(distance < 400){
         $navItem.siblings().removeClass('on')
     }else if( distance > 700 && distance < 1100){
@@ -2699,8 +2700,161 @@ $(window).on('scroll', function(){
     }else if (distance > 1550 && distance < 2200){
         $navItem.siblings().removeClass('on').eq(2).addClass('on')
     }
-    
 })
+//gotop
 $('.back-top').on('click', function(){
-    $(window).scrollTop(0)
+    $('body').animate({
+        scrollTop: 0
+    }, 500)
 })
+//app-download
+
+$appDown.hover(
+    function(){
+        $appIcon.animate({
+            opacity: 0.8
+        }, 50, function(){
+            $appIcon.css('background-image','url(./img/app-download_2.png)')
+                    .animate({opacity:1})
+        })
+        $appIcon.animate({
+            opacity: 0.8
+        }, 50, function(){
+            $appIcon.css('background-image','url(./img/app-download_3.png)')
+                    .animate({opacity:1})
+        })
+        $appIcon.animate({
+            opacity: 0.8
+        }, 50, function(){
+            $appIcon.css('background-image','url(./img/app-download_4.png)')
+                    .animate({opacity:1})
+        })
+        $appIcon.animate({
+            opacity: 0.8
+        }, 50, function(){
+            $appIcon.css('background-image','url(./img/app-download_5.png)')
+                    .animate({opacity:1})
+        })
+        $appIcon.animate({
+            opacity: 0.8
+        }, 50, function(){
+            $appIcon.css('background-image','url(./img/app-download_6.png)')
+                    .animate({opacity:1})
+        })
+        $appIcon.animate({
+            opacity: 0.8
+        }, 50, function(){
+            $appIcon.css('background-image','url(./img/app-download_7.png)')
+                    .animate({opacity:1})
+        })
+        $appIcon.animate({
+            opacity: 0.8
+        }, 50, function(){
+            $appIcon.css('background-image','url(./img/app-download_8.png)')
+                    .animate({opacity:1})
+        })
+        $appIcon.animate({
+            opacity: 0.8
+        }, 50, function(){
+            $appIcon.css('background-image','url(./img/app-download_9.png)')
+                    .animate({opacity:1})
+        })
+        $appIcon.animate({
+            opacity: 0.8
+        }, 50, function(){
+            $appIcon.css('background-image','url(./img/app-download_10.png)')
+                    .animate({opacity:1})
+        })
+
+        setInterval(function(){
+            $appIcon.animate({
+                opacity: 0.8
+            }, 50, function(){
+                $appIcon.css('background-image','url(./img/app-download_10.png)')
+                        .animate({opacity:1})
+            })
+            $appIcon.animate({
+                opacity: 0.8
+            }, 50, function(){
+                $appIcon.css('background-image','url(./img/app-download_12.png)')
+                        .animate({opacity:1})
+            })
+            $appIcon.animate({
+                opacity: 0.8
+            }, 50, function(){
+                $appIcon.css('background-image','url(./img/app-download_14.png)')
+                        .animate({opacity:1})
+            })
+            $appIcon.animate({
+                opacity: 0.8
+            }, 50, function(){
+                $appIcon.css('background-image','url(./img/app-download_16.png)')
+                        .animate({opacity:1})
+            })
+            $appIcon.animate({
+                opacity: 0.8
+            }, 50, function(){
+                $appIcon.css('background-image','url(./img/app-download_14.png)')
+                        .animate({opacity:1})
+            })
+            $appIcon.animate({
+                opacity: 0.8
+            }, 50, function(){
+                $appIcon.css('background-image','url(./img/app-download_12.png)')
+                        .animate({opacity:1})
+            })
+        }, 200)
+    },
+    function(){
+        $appIcon.animate({
+            opacity: 0.8
+        }, 50, function(){
+            $appIcon.css('background-image','url(./img/app-download_10.png)')
+                    .animate({opacity:1})
+        })
+        $appIcon.animate({
+            opacity: 0.8
+        }, 50, function(){
+            $appIcon.css('background-image','url(./img/app-download_8.png)')
+                    .animate({opacity:1})
+        })
+        $appIcon.animate({
+            opacity: 0.8
+        }, 50, function(){
+            $appIcon.css('background-image','url(./img/app-download_6.png)')
+                    .animate({opacity:1})
+        })
+        $appIcon.animate({
+            opacity: 0.8
+        }, 50, function(){
+            $appIcon.css('background-image','url(./img/app-download_5.png)')
+                    .animate({opacity:1})
+        })
+        $appIcon.animate({
+            opacity: 0.8
+        }, 50, function(){
+            $appIcon.css('background-image','url(./img/app-download_4.png)')
+                    .animate({opacity:1})
+        })
+        $appIcon.animate({
+            opacity: 0.8
+        }, 50, function(){
+            $appIcon.css('background-image','url(./img/app-download_3.png)')
+                    .animate({opacity:1})
+        })
+        $appIcon.animate({
+            opacity: 0.8
+        }, 50, function(){
+            $appIcon.css('background-image','url(./img/app-download_2.png)')
+                    .animate({opacity:1})
+        })
+        $appIcon.animate({
+            opacity: 0.8
+        }, 50, function(){
+            $appIcon.css('background-image','url(./img/app-download_1.png)')
+                    .animate({opacity:1})
+        })
+    }
+)
+    
+
