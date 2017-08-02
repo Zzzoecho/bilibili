@@ -298,6 +298,7 @@ menu > ul >li .nav-detail {
     overflow: hidden;
     background: #fff;
     opacity: 0;
+    z-index: -10;
 }
 
 menu > ul > li > .icon-detail > .nav-detail {
@@ -1740,7 +1741,7 @@ menu > ul > #icon:hover .icon-detail {
     width: 80px;
     height: 80px;
     transition: all .5s;
-    background-image: url(./img/app-download_1.png);
+    background-image: url(http://oo7a0zmzl.bkt.clouddn.com/17-8-2/54607439.jpg);
 }
 .elevator-module .app-download .app-tips-icon {
     display: none;

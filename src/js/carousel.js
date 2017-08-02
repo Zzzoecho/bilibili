@@ -1,11 +1,13 @@
-Carousel = (function () {
+require ('../css/carousel.css')
+
+var Carousel = (function() {
     function _Carousel($ct) {
         this.$ct = $ct
         this.init()
         this.bind()
         this.play(0)
         this.autoplay()
-    }
+    }   
 
     _Carousel.prototype = {
         init: function () {
@@ -78,3 +80,5 @@ Carousel = (function () {
         }
     }
 })()
+
+module.exports = Carousel

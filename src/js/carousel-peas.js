@@ -1,4 +1,6 @@
-Rotation = (function () {
+require ('../css/carousel-peas.css')
+
+Rotation = (function() {
     function Carousel($ct) {
         this.$ct = $ct
         this.init()
@@ -80,3 +82,5 @@ Rotation = (function () {
         }
     }
 })()
+
+module.exports = Rotation
