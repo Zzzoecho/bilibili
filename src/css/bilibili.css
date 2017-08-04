@@ -281,7 +281,7 @@ menu > ul > .icon-blackroom {
     background-position: -725px -519px;
 }
 menu > ul > .iconfont a {
-    font-size: 16px;
+    font-size: 15.5px;
 }
 menu > a {
     float: right;
@@ -838,7 +838,7 @@ menu > ul > #icon:hover .icon-detail {
 }
 .video .num{
     position: absolute;
-    bottom: -4px;
+    bottom: -2px;
     left: 0;
     height: 20px;
     line-height: 20px;
@@ -881,6 +881,9 @@ menu > ul > #icon:hover .icon-detail {
     word-wrap: break-word;
     word-break: break-all;
     overflow: hidden;
+}
+.living .video .num {
+    bottom: -4px;
 }
 .video:hover .num {
     bottom: -20px;
