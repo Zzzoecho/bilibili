@@ -1,5 +1,5 @@
 require('./src/css/nav.css')
-require('./bilibili.css')
+require('./src/css/bilibili.css')
 import Panel from './src/js/panel'
 var Carousel = require('./src/js/carousel')
 var Rotation = require('./src/js/carousel-peas')
