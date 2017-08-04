@@ -313,7 +313,7 @@ icon {
     height: 20px;
     vertical-align: sub;
     background-repeat: no-repeat;
-    background-image: url(http://s1.hdslb.com/bfs/static/phoenix/home/static/img/icons.afbff55.png);
+    background-image: url(https://s1.hdslb.com/bfs/static/phoenix/home/static/img/icons.afbff55.png);
 }
 
 header{
@@ -396,7 +396,7 @@ nav > .z-header > .menu .home {
     display: inline-block;
     padding-left: 32px;
     background-repeat: no-repeat;
-    background-image: url(http://s1.hdslb.com/bfs/static/phoenix/home/static/img/icons.afbff55.png);
+    background-image: url(https://s1.hdslb.com/bfs/static/phoenix/home/static/img/icons.afbff55.png);
     background-position: -847px -74px;
 }
 header li {
@@ -495,7 +495,7 @@ nav > .z-header .user .sub:hover .upload {
     padding-left: 26px;
     background-repeat: no-repeat;
     background-position: -659px -655px;
-    background-image: url(http://s1.hdslb.com/bfs/static/phoenix/home/static/img/icons.afbff55.png);
+    background-image: url(https://s1.hdslb.com/bfs/static/phoenix/home/static/img/icons.afbff55.png);
 }
 
 .search-wrap .search input {
@@ -514,7 +514,7 @@ nav > .z-header .user .sub:hover .upload {
     background-color: transparent;
     background-repeat: no-repeat;
     background-position: -653px -720px;
-    background-image: url(http://s1.hdslb.com/bfs/static/phoenix/home/static/img/icons.afbff55.png);
+    background-image: url(https://s1.hdslb.com/bfs/static/phoenix/home/static/img/icons.afbff55.png);
 } 
 /*****content*****/
 .content {
@@ -551,14 +551,14 @@ menu > ul > li span {
 }
 menu > ul > .home {
     margin-left: 0;
-    background: url(http://s1.hdslb.com/bfs/static/phoenix/home/static/img/icons.afbff55.png) -658px -1173px no-repeat;
+    background: url(https://s1.hdslb.com/bfs/static/phoenix/home/static/img/icons.afbff55.png) -658px -1173px no-repeat;
 }
 menu > ul > li a {
     color: #000;
     font-size: 14px;
 }
 #icon {
-    background-image: url(http://s1.hdslb.com/bfs/static/phoenix/home/static/img/icons.afbff55.png);
+    background-image: url(https://s1.hdslb.com/bfs/static/phoenix/home/static/img/icons.afbff55.png);
     background-repeat: no-repeat;
 }
 menu > ul > .iconfont {
@@ -617,7 +617,7 @@ menu > ul >li .nav-detail .detail-items span {
     line-height: 30px;
     font-family: 'Microsoft Yahei';
     padding-left: 25px;
-    background: url(http://s1.hdslb.com/bfs/static/phoenix/home/static/img/icons2.324edea.png) no-repeat 12px -1612px;
+    background: url(https://s1.hdslb.com/bfs/static/phoenix/home/static/img/icons2.324edea.png) no-repeat 12px -1612px;
 }
 @keyframes slidein {
     from {
@@ -633,7 +633,7 @@ menu > ul >li .nav-detail .detail-items .arrow {
     position: absolute;
     top: 6px;
     right: -18px;
-    background: url(http://s1.hdslb.com/bfs/static/phoenix/home/static/img/icons2.324edea.png) no-repeat 0 -1581px;
+    background: url(https://s1.hdslb.com/bfs/static/phoenix/home/static/img/icons2.324edea.png) no-repeat 0 -1581px;
     width: 15px;
     height: 18px;
     transition: all .2s;
@@ -814,7 +814,7 @@ menu > ul > #icon:hover .icon-detail {
     right: 6px;
     bottom: 4px;
     cursor: pointer;
-    background-image: url(http://s1.hdslb.com/bfs/static/phoenix/home/static/img/watchlater-1.9f7609f.png);
+    background-image: url(https://s1.hdslb.com/bfs/static/phoenix/home/static/img/watchlater-1.9f7609f.png);
 }
 .hit .views-top .btn {
     opacity: 0;
@@ -822,7 +822,7 @@ menu > ul > #icon:hover .icon-detail {
     top: 50%;
     margin-top: -28px;
     background-color: rgba(0,0,0,.6);
-    background-image: url(http://s1.hdslb.com/bfs/static/phoenix/home/static/img/icons2.324edea.png);
+    background-image: url(https://s1.hdslb.com/bfs/static/phoenix/home/static/img/icons2.324edea.png);
     background-repeat: no-repeat;
     width: 20px;
     font-size: 12px;
@@ -1166,7 +1166,7 @@ menu > ul > #icon:hover .icon-detail {
     width: 12px;
     height: 12px;
     margin-right: 5px;
-    background: url(http://s1.hdslb.com/bfs/static/phoenix/home/static/img/live-eye.11838cd.png);
+    background: url(https://s1.hdslb.com/bfs/static/phoenix/home/static/img/live-eye.11838cd.png);
     background-position: 0 0;
 }
 .living .video a {
@@ -1294,7 +1294,7 @@ menu > ul > #icon:hover .icon-detail {
     width: 12px;
     height: 12px;
     margin-right: 5px;
-    background: url(http://s1.hdslb.com/bfs/static/phoenix/home/static/img/live-eye.11838cd.png);
+    background: url(https://s1.hdslb.com/bfs/static/phoenix/home/static/img/live-eye.11838cd.png);
     background-position: 0 0;
     vertical-align: text-top;
 }
@@ -1319,7 +1319,7 @@ menu > ul > #icon:hover .icon-detail {
     vertical-align: middle;
     width: 20px;
     height: 20px;
-    background-image: url(http://s1.hdslb.com/bfs/static/phoenix/home/static/img/empty-icon.c07d839.png);
+    background-image: url(https://s1.hdslb.com/bfs/static/phoenix/home/static/img/empty-icon.c07d839.png);
     background-position: center -598px;
     background-repeat: no-repeat;
     margin-right: 5px;
